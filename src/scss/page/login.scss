@@ -1,0 +1,95 @@
+@import '../base/param';
+@import "../layout/header";
+@import "../layout/input";
+@import "../components/confirm";
+.header {
+    border-bottom: none;
+    background: none;
+}
+.mui-content {
+    background: url("../../img/bg/login_bg.png") no-repeat;
+    background-size: 100% 100%;
+    min-height: 100%;
+    position: absolute;
+    width: 100%;
+}
+.input-cell {
+    margin: $length60 $length24 0;
+    .mui-input-row {
+        text-align: center;
+    }
+    .input-mobile {
+        margin-bottom: $length20;
+    }
+    input {
+        border: none;
+        background: none;
+        font-size: $fontSize20;
+        border-radius: 0;
+        padding: 0 2rem 0 0;
+        margin-bottom: 0;
+    }
+    input::-webkit-input-placeholder {
+        color: $color000;
+        opacity: 0.2;
+    }
+    input:-moz-placeholder {
+        color: $color000;
+        opacity: 0.2;
+    }
+    input::-moz-placeholder {
+        color: $color000;
+        opacity: 0.2;
+    }
+    input:-ms-input-placeholder {
+        color: $color000;
+        opacity: 0.2;
+    }
+    .input-tips {
+        border-bottom: 1px solid $tipColor878787;
+        text-align: left;
+        font-size: $fontSize12;
+    }
+    .error {
+        padding-bottom: $length8;
+        color: $mainColor;
+    }
+    .mui-icon.mui-icon-eye {
+        display: none;
+    }
+}
+//忘记密码
+.forget-pwd-cell {
+    text-align: right;
+    font-size: $fontSize12;
+    .forget-pwd {
+        display: inline-block;
+        color: $color666;
+        padding: $length14 $length24;
+    }
+}
+//确认
+.btn-cell {
+    margin: $length14 auto;
+    width: 90%;
+    .btn {
+        background-color: $mainColor;
+        color: $colorfff;
+        line-height: $length40;
+        text-align: center;
+        border-radius: $length20;
+        font-size: $fontSize16;
+    }
+    .btn.disabled {
+        opacity: 0.5;
+    }
+}
+//注册
+.register-cell {
+    padding-top: $length10;
+    text-align: center;
+    .register {
+        color: $mainColor;
+        font-size: $fontSize16;
+    }
+}

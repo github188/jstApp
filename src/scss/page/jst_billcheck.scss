@@ -1,0 +1,131 @@
+@charset "utf-8";
+@import '../base/param';
+@import "../layout/header";
+@import "../layout/slider";
+*{
+    font-family:"Microsoft YaHei", "Helvetica Neue", "Helvetica", "sans-serif", "arial", "宋体";
+    color:$color333;
+}
+
+html,body{
+    height:100%;
+    background:#f9f9f9;
+}
+.ds-none{
+    display: none!important;
+}
+.mui-content{
+    padding:0 $length15;
+    padding-top:$length20;
+    background:#f9f9f9;
+    height:100%;    
+}
+
+/*轮播图*/
+.mui-slider{
+    padding-top:$length20;
+    height:$length60 + $length15;
+    background:#f9f9f9;
+    position:fixed;
+    top:$length40;
+    left:0;
+    z-index:999;
+    .mui-slider-group{
+        .mui-slider-item{
+            
+        }
+    }
+    .mui-slider-indicator{
+        margin-top:$length20;
+    }
+}
+.border{
+    width:100%;
+    text-align:center;
+    position:fixed;
+    top:$length60 + $length50;
+    left:0;
+    z-index:999;
+    img{
+        width:6*$length60;
+        height:$length10;
+    }
+}
+.list{
+    width:4*$length60 + $length50;
+    margin:0 auto;
+    .list-icon{
+        float:left;
+        width:40%;
+        height:$length30;
+        background-image:url(../../img/icon/micon_3.png);
+        background-repeat: no-repeat;
+        background-size: $length40 $length30;
+        background-position: right center;
+    }
+    .card-num{
+        float:right;
+        width:58%;
+        height:$length30;
+        line-height:$length30;
+        font-size:$fontSize16;
+    }
+}
+.fixed{
+    height:$length60 + $length15;
+    width:100%;
+    padding-top:$length20;
+    background:#f9f9f9;
+    position:fixed;
+    top:$length40;
+    left:0;
+    z-index:999; 
+}
+/**/
+.bill-cell{
+    padding-bottom:$length20;
+    padding-top:$length60 + $length40;
+    background-image:url(../../img/bg/zd2.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+    .bill-list{
+        
+        padding:0 $length20;
+        .bill-row{
+            
+            .bill-title{
+                float:left;
+                width:64%;
+                font-size:$fontSize16;
+                line-height:$length40;
+            }
+            .bill-num{
+                float:right;
+                width:34%;
+                text-align:right;
+                font-size:$fontSize17;
+                line-height:$length40;
+            }
+            .recharge{
+                color:$jstMainColor;
+            }
+            .bill-date{
+                float:left;
+                width:64%;
+                font-size:$fontSize11;
+                padding-bottom:$length20;
+            }
+            .bill-result{
+                float:right;
+                width:34%;
+                font-size:$fontSize11;
+                text-align:right;
+                padding-bottom:$length20;
+            }
+            &:last-child{
+                border-bottom:1px solid $jstBorderColor;
+            }
+        }       
+    }
+}

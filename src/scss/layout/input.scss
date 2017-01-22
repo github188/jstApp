@@ -1,0 +1,128 @@
+/*输入框样式*/
+@import '../base/param';
+@import '../sprite/sprite';
+input,
+p {
+    font-size: $fontSize12;
+    -webkit-appearance: none;
+}
+input {
+    &[type=color],
+    &[type=date],
+    &[type=datetime-local],
+    &[type=datetime],
+    &[type=email],
+    &[type=month],
+    &[type=number],
+    &[type=password],
+    &[type=search],
+    &[type=tel],
+    &[type=text],
+    &[type=time],
+    &[type=url],
+    &[type=week],
+    select,
+    textarea {
+        line-height: 1;
+        width: 100%;
+        height: $length40;
+        margin-bottom: $length15;
+        padding: $length10 $length15;
+        -webkit-user-select: text;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        border-radius: 3px;
+        outline: 0;
+        font-size: $fontSize14;
+        background-color: #fff;
+        -webkit-appearance: none;
+    }
+}
+/*mui输入框清除按钮样式*/
+.mui-input-group {
+    position: relative;
+    padding: 0;
+    border: 0;
+    background-color: #fff;
+}
+.mui-input-row label ~ {
+    input,
+    select,
+    textarea {
+        float: right;
+        width: 65%;
+        margin-bottom: 0;
+        padding-left: 0;
+        border: 0;
+    }
+}
+.mui-input-group {
+    input,
+    textarea {
+        margin-bottom: 0;
+        border: 0;
+        border-radius: 0;
+        background-color: transparent;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+}
+.mui-input-row {
+    position: relative;
+    clear: left;
+    overflow: hidden;
+    label {
+        font-family: 'Helvetica Neue',Helvetica,sans-serif;
+        line-height: 1.1;
+        float: left;
+        width: 35%;
+        padding: 0.47rem 0.64rem;
+    }
+    .mui-input-clear ~ .mui-icon-clear,
+    .mui-input-password ~ .mui-icon-eye,
+    .mui-input-speech ~ .mui-icon-speech {
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        right: 0;
+        width: $length40;
+        height: $length40;
+        text-align: center;
+        color: $color999;
+    }
+}
+.mui-input-group {
+    position: relative;
+    padding: 0;
+    border: 0;
+    background-color: #fff;
+    .mui-input-row:after {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: $length15;
+        height: 1px;
+        content: '';
+        -webkit-transform: scaleY(0.5);
+        transform: scaleY(0.5);
+        background-color: #c8c7cc;
+    }
+}
+%icon-absolute {
+    position: absolute;
+    content: '';
+    left: 50%;
+    top: 50%;
+    margin-left: -$iconHeight / 2;
+    margin-top: -$iconHeight / 2;
+}
+.mui-icon-clear:before {
+    @extend %icon-absolute;
+    @include clearInputIcon;
+}
+.mui-icon-eye:before {
+    @extend %icon-absolute;
+    @include pwdInputIcon;
+}
+.mui-icon-eye.mui-active:before {
+    @include pwdInputIconActive;
+}

@@ -1,0 +1,113 @@
+@import "../base/base";
+@import "../base/param";
+@import "../layout/header";
+@import "../layout/keyboard_pwd";
+@import "../components/confirm";
+
+/*mui样式重写*/
+.mui-popup-button {
+    color: $jstMainColor !important;
+}
+.mui-content {
+    padding: 0;
+}
+/*页面样式*/
+.reset-ti {
+    width: 100%;
+    max-width: $maxwidth;
+    margin: auto;
+    overflow: hidden;
+    padding-top: $length70;
+    text-align: center;
+    font-size: $fontSize16;
+}
+.reset-img {
+    width: 100%;
+    max-width: $maxwidth;
+    margin: auto;
+    overflow: hidden;
+    div {
+        text-align: center;
+        padding-top: $length60;
+    }
+    div h3 {
+        width: $length50;
+        height: $length50;
+        margin: auto;
+    }
+    div h3.reset-carry {
+        background: url("../../img/icon/jdmm2.png") no-repeat;
+        background-size: 100% auto;
+    }
+    div h3.reset-carry:active{
+        background: url("../../img/icon/jdmm1.png") no-repeat;
+        background-size: 100% auto;
+    }
+    div h3.reset-memory {
+        background: url("../../img/icon/wjmm2.png") no-repeat;
+        background-size: 100% auto;
+    }
+    div h3.reset-memory:active {
+        background: url("../../img/icon/wjmm1.png") no-repeat;
+        background-size: 100% auto;
+    }
+    div p {
+        font-size: $fontSize14;
+        margin-top:$length5;
+    }
+    div img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+}
+.none {
+    display: none !important;
+}
+.noline {
+    border: 0 !important;
+}
+.padtop-15 {
+    padding-top: $length15;
+}
+.padbottom-30 {
+    padding-bottom: $length30;
+}
+.fc-gray-878787 {
+    color: $tipColor878787;
+}
+.fc-orange {
+    color: $jstMainColor;
+}
+.line-orange {
+    border: 1px solid $jstMainColor;
+}
+.line-gray {
+    border: 1px solid $jstBorderColor;
+}
+.loss-head {
+    width: 100%;
+    max-width: $maxwidth;
+    margin: auto;
+    overflow: hidden;
+    padding-top: $length22;
+    .loss-icon {
+        width: 16%;
+        overflow: hidden;
+        margin: auto;
+    }
+    .loss-icon img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+    .loss-tips {
+        width: 75%;
+        margin: auto;
+        padding-top: $length9;
+        font-size: $fontSize11;
+        line-height: $length18;
+        color: $tipColor878787;
+        text-align: center;
+    }
+}

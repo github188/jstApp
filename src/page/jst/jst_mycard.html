@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>卡管理</title>
+
+		<meta name="author" content="devloper@jieshunpay.com">
+
+		<!-- 为移动设备添加 viewport -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<!-- 关闭电话号码识别： -->
+		<meta content="telephone=no" name="format-detection">
+		<!-- 邮箱识别： -->
+		<meta content="email=no" name="format-detection">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../../css_output/base/base.css" />
+		<link rel="stylesheet" href="../../css_output/page/jst_mycard.css" inline/>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav header">
+			<a class="back mui-action-back mui-icon mui-icon-back"></a>
+			<p class="mui-title">卡管理</p>
+		</header>
+		<div class="mui-content">
+			<!--轮播图-->
+			<section id="slider" class="mui-slider">
+				<div class="mui-slider-group mui-slider-loop">
+					<div class="mui-slider-item mui-slider-item-duplicate">
+						<div class="card-list ">
+							<div class="card-num"></div>
+							<div class="card-state"></div>
+							<div class="as-main ds-none"></div>
+							<div class="card-bill card-ycbill"></div>
+						</div>
+					</div>
+					<div class="mui-slider-item">
+						<div class="card-list ">
+							<div class="card-num"></div>
+							<div class="card-state"></div>
+							<div class="as-main ds-none"></div>
+							<div class="card-bill"></div>
+						</div>
+					</div>
+					<div class="mui-slider-item mui-slider-item-duplicate">
+						<div class="card-list ">
+							<div class="card-num"></div>
+							<div class="card-state"></div>
+							<div class="as-main ds-none"></div>
+							<div class="card-bill"></div>
+						</div>
+					</div>
+				</div>
+				<div class="mui-slider-indicator">
+					<!--<div class="mui-indicator mui-active"></div>
+					<div class="mui-indicator"></div>-->
+				</div>
+			</section>
+			<!--只有一张卡-->
+			<section id="oneCard" class="one-cell mui-hidden">
+				<div class="one-card one-main">
+					<div class="one-num"></div>
+					<div class="one-bill">账单></div>
+				</div>
+			</section>
+			<!--账户信息-->
+			<section class="acc-cell clearfloat">
+				<div class="acc-col">
+					<div class="acc-title">账户余额</div>
+					<div id="acctBal" class="balance">0.00</div>
+				</div>
+				<div class="acc-col unvisiable">
+					<div class="acc-title">电子钱包</div>
+					<div id="cardBal" class="balance">0.00</div>
+				</div>
+				<div class="acc-col">
+					<div id="toRecharge" class="acc-btn">充值</div>
+				</div>
+			</section>
+			<!--操作类型-->
+			<section class="oper-cell">
+				<div id="unbind" class="oper clearfloat">
+					<div class="oper-txt">解绑</div>
+					<div class="oper-icon icon-right"></div>
+				</div>
+				<div id="loss" class="oper clearfloat ds-none">
+					<div class="oper-txt">挂失</div>
+					<div class="oper-icon"></div>
+				</div>
+				<div id="reset" class="oper clearfloat ds-none">
+					<div class="oper-txt">重置密码</div>
+					<div class="oper-icon"></div>
+				</div>
+			</section>
+			<!--绑卡按钮-->
+			<section class="bindcard-cell">
+				<div class="bindcard"></div>
+			</section>
+		</div>
+
+		<!--MUI-->
+		<script src="../../js/vendors/mui.3.2.0.js"></script>
+		<script src="../../js/vendors/mui.slider.pullrefresh.js"></script>
+		<script src="../../js/vendors/mui.actionsheet.popover.js"></script>
+		<!-- 自定义js -->
+		<script src="../../js/common.js"></script>
+		<script type="text/javascript" src="../../js/jst_mycard.js"></script>
+	</body>
+
+</html>

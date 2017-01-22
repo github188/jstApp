@@ -1,0 +1,227 @@
+@import '../base/param';
+@import "../layout/header";
+@import "../sprite/sprite";
+@import "../layout/page_view";
+@import "../layout/input";
+@import "../components/confirm.scss";
+%borderBottom {
+    border-bottom: 1px solid $borderColor;
+}
+
+.mui-page,
+.mui-page-content,
+.mui-pages,
+.mui-view,
+.mui-views {
+    background: $colorfff;
+}
+
+//mui重写
+.mui-input-group .mui-input-row:after {
+    height: 0;
+}
+
+.card-type-container {
+
+    display: flex;
+    align-items: center;
+    background: $mainColor;
+    height: $length74;
+    .card-img-box {
+        width: $length40;
+        height: $length40;
+        background: $colorfff;
+        padding: $length4;
+        border-radius: $length40 / 2;
+        margin-left: $length16;
+        margin-right: $length8;
+    }
+    .card-img {
+        display: inline-block;
+        width: $length32;
+        height: $length32;
+    }
+    .card-info {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        margin-right: $length16 + $iconRightBoldWidth;
+        .card-name {
+            font-size: $fontSize16;
+            font-weight: 600;
+            color: $colorfff;
+        }
+        .card-type-tip {
+            margin-top: $length4;
+            color: $colorfff;
+            font-size: $fontSize11;
+
+        }
+    }
+    &:after {
+        width: $iconRightBoldWidth;
+        height: $iconRightBoldHeight;
+        background: url("../../img/icon/icon_right_bold.png") no-repeat;
+        background-size: 100% 100%;
+        margin-top: -$iconRightBoldHeight / 2;
+        right: $length16;
+    }
+    &:last-child {
+        border-bottom: none;
+    }
+
+}
+.card-type-container.empty {
+    background: $contentBgcolor;
+    .card-name {
+        color: $color333;
+        font-weight: normal;
+    }
+    .card-type-tip {
+        display: none;
+    }
+    &:after {
+        background: url("../../img/icon/icon_right.png") no-repeat;
+        background-size: 100% 100%;
+    }
+}
+
+.table-cell {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: $colorfff;
+    line-height: $length40;
+    padding: 0 $length16;
+    @extend %borderBottom;
+    span {
+        display: inline-block;
+    }
+    .cell-left {
+        color: $color666;
+        font-size: $fontSize12;
+    }
+    .cell-right {
+        flex: 3;
+        text-align: left;
+        color: $color666;
+        vertical-align: top;
+        input {
+            margin-bottom: 0;
+            border: none;
+            padding: $length5 0;
+        }
+    }
+    .money-input,
+    .money-symol {
+        font-size: $fontSize26;
+        color: $color333;
+        margin-right: $length8;
+    }
+    //提示
+    .tip-cell {
+        color: $tipColor878787;
+        font-size: $fontSize11;
+        padding: 0 0 $length4;
+        flex: 0 0 100%;
+        line-height: 1;
+
+    }
+}
+
+//充值输入
+.input-cell {
+    margin-top: $length20;
+    border-bottom: $length10 solid $contentBgcolor;
+}
+
+//提现银行卡
+.card-cell {
+    display: flex;
+    background-color: $colorfff;
+    line-height: $length55;
+    padding: 0 $length15;
+    @extend %borderBottom;
+    span {
+        display: inline-block;
+    }
+    .card-icon {
+        display: none;
+        width: $length30;
+        img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+    }
+    .card-info {
+        padding: 0 $length10;
+        flex: 1;
+    }
+}
+.input-view {
+    margin: $length15;
+    .title {
+        line-height: $length40;
+        font-size: $fontSize12;
+    }
+}
+//确认
+.btn-cell {
+    margin: $length50 auto;
+    width: 90%;
+    .btn {
+        color: $colorfff;
+        line-height: $length40;
+        text-align: center;
+        border-radius: $length20;
+        font-size: $fontSize16;
+    }
+    .btn.default {
+        background-color: $mainColor !important;
+        color: $colorfff !important;
+        border: none !important;
+    }
+    .btn.disabled {
+        opacity: 0.5;
+    }
+}
+
+//充值结果
+.top-cell {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: $length130;
+    background: $mainColor;
+    color: $colorfff;
+    .t-c-img {
+        width: $length40 * 2;
+    }
+    .t-c-tip {
+        font-size: $fontSize16;
+        padding-top: $length10;
+    }
+}
+.table-cell-view {
+    background: $colorfff;
+    padding: 0 $length16;
+    .cell-item {
+        display: flex;
+        align-items: center;
+        height: $length50;
+        border-bottom: 1px solid $borderColor;
+        .cell-left {
+            flex: 1;
+            font-size: $fontSize14;
+        }
+        .cell-right {
+            flex: 1;
+            font-size: $fontSize14;
+            text-align: right;
+            color: $color666;
+        }
+    }
+    .cell-item.icon-right .text-right {
+        margin-right: $iconRightWidth;
+    }
+}

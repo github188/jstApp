@@ -1,0 +1,32 @@
+
+@import '../base/param';
+@import "../layout/header";
+
+.paytalk-box {
+    width: 100%;
+    overflow: hidden;
+    .paytalk-text {
+        width: 90%;
+        margin: auto;
+        overflow: hidden;
+        text-align: justify;
+        .paytalk-ti{
+            text-align: center;
+            font-size: $fontSize14;
+            color: $mainColor;
+            margin-top: $length20;
+        }
+        p {
+            font-size: $fontSize12;
+            color: $color666;
+            line-height: $length20;
+            text-indent: 2em;
+            .paytalk-point {
+                color: $color333;
+                font-weight: bold;
+                text-decoration: underline;
+                }
+        }
+
+    }
+}

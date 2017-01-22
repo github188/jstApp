@@ -1,0 +1,81 @@
+@import '../base/param'; //头部返回图标
+@mixin headReturnIcon {
+    width: $iconHeight;
+    height: $iconHeight;
+    background: url("../../img/icon/icon_return.png") no-repeat;
+    background-size: auto 100%;
+}
+//输入框右边清除图标
+@mixin clearInputIcon {
+    width: $iconHeight;
+    height: $iconHeight;
+    background: url("../../img/icon/icon_input_clear.png") no-repeat;
+    background-size: 100% 100%;
+}
+
+@mixin pwdInputIcon {
+    width: $iconHeight;
+    height: $iconHeight;
+    background: url("../../img/icon/icon_pwd_eye_on.png") no-repeat;
+    background-size: 100% auto;
+    background-position: center;
+}
+@mixin pwdInputIconActive {
+    width: $iconHeight;
+    height: $iconHeight;
+    background: url("../../img/icon/icon_pwd_eye.png") no-repeat;
+    background-size: 100% auto;
+    background-position: center;
+}
+
+//每行右侧向右小箭头
+@mixin rightNavIcon {
+    width: $iconRightWidth;
+    height: $iconRightHeight;
+    background: url("../../img/icon/icon_right.png") no-repeat;
+    background-size: 100% 100%;
+}
+
+//关闭窗口图标
+@mixin closeWindowIcon {
+    
+    position: absolute;
+    content: '';
+    top: 50%;
+    margin-top: -$iconCloseHeight;
+
+    width: $iconCloseWidth * 2;
+    height: $iconCloseHeight * 2;
+    background: url("../../img/icon/icon_close.png") no-repeat;
+    background-size: 50% 50%;
+    background-position: center;
+}
+
+//问号
+@mixin askIcon {
+    position: absolute;
+    display: block;
+    width: $iconAskWidth * 2;
+    height: $iconAskHeight * 2;
+    background: url("../../img/icon/icon_ask.png") no-repeat;
+    background-size: 50% 50%;
+    top: 50%;
+    right: 0;
+    margin-top: -$iconAskHeight / 2;
+    background-position: top right;
+}
+
+//加号
+@mixin addIcon {
+    position: absolute;
+    display: block;
+    width: $iconAddWidth * 2;
+    height: $iconAddHeight * 2;
+    background: url("../../img/icon/icon_add.png") no-repeat;
+    background-size: 50% 50%;
+    top: 50%;
+    right: 0;
+    margin-top: -$iconAddHeight;
+    background-position: center;
+}
+

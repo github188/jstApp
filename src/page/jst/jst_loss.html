@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="author" content="devloper@jieshunpay.com">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<!-- 关闭电话号码识别： -->
+		<meta content="telephone=no" name="format-detection">
+		<!-- 邮箱识别： -->
+		<meta content="email=no" name="format-detection">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<title>捷顺通卡挂失</title>
+		<link rel="stylesheet" href="../../css_output/base/base.css" />
+		<link rel="stylesheet" href="../../css_output/page/jst_loss.css">
+	</head>
+
+	<body>
+		<div class="mui-content">
+			<section class="loss-head">
+				<div class="loss-icon"><img src="../../img/icon/rz.png" /></div>
+				<p class="loss-tips headTips">请填写您购卡时填写的相关信息，确认身份信息加密处理，仅用于卡信息校验</p>
+			</section>
+			<section class="loss-info">
+				<div class="loss-name loss-row">
+					<span>持卡人</span>
+					<div class="loss-inpbox loss-flex">
+						<input id="loss-user" type="text" placeholder="请填写您的姓名" maxlength="15">
+					</div>
+				</div>
+				<div class="loss-ident loss-row">
+					<span>证件类型</span><i id="tc-identbtn" class="loss-flex">身份证</i>
+				</div>
+				<div class="loss-card loss-row">
+					<span>证件号</span>
+					<div class="loss-inpbox loss-flex">
+						<input id="loss-code" type="text" placeholder="请填写您的证件号" maxlength="18">
+						<p class="loss-warn none">您输入的证件号格式不正确</p>
+					</div>
+				</div>
+				<div class="loss-password loss-row">
+					<span>卡密码</span>
+					<div class="loss-inpbox loss-flex inpBox">
+						<input id="loss-passkey" type="password" placeholder="请输入6位卡数字密码" maxlength="6">
+					</div>
+				</div>
+				<div class="loss-tell">
+					<i></i><span id="tc-pwinfo">不知道卡密码？</span>
+				</div>
+			</section>
+			<div class="loss-next">
+				<button class="loss-btn fc-gray-878787 line-gray">挂失</button>
+			</div>
+
+			<div id="tc-stage" class="tc-close tc-show none"></div>
+			<div id="tc-tellpw" class="h5-fadeInUp tc-show none">
+				<p class="tellpw-ti"><span class="tellpw-close tc-close"><img src="../../img/icon/micon_2.png" /></span>输入支付密码</p>
+				<p class="tellpw-item padtop-15">1.如未修改卡密码，请见卡身背面刮条，输入6位数字卡密码。</p>
+				<p class="tellpw-item tellpw-img"><img src="../../img/icon/jstcard.jpg" /></p>
+				<p class="tellpw-item padbottom-30">2.如已修改并忘记卡密码，
+					<a id="loss-gopw" class="fc-orange">请点此找回密码。</a>
+				</p>
+			</div>
+			<ul id="tc-credentials" class="tc-show none">
+				<li data-type="01" class="noline tc-close">身份证</li>
+				<li data-type="01" class="tc-close">驾驶证</li>
+				<li data-type="02" class="tc-close">士兵证</li>
+				<li data-type="02" class="tc-close">武装警身份证</li>
+				<li data-type="02" class="tc-close">港澳台通行证</li>
+				<li data-type="02" class="tc-close">台胞证</li>
+				<li data-type="02" class="tc-close">护照</li>
+				<li data-type="02" class="tc-close">军残证</li>
+			</ul>
+		</div>
+		<!--MUI-->
+		<script src="../../js/vendors/mui.3.2.0.js"></script>
+		<!-- 自定义js -->
+		<script src="../../js/common.js"></script>
+		<script src="../../js/jst_loss.js"></script>
+	</body>
+
+</html>

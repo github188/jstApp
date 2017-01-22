@@ -1,0 +1,234 @@
+@charset "utf-8";
+@import "../base/base";
+@import '../base/param';
+@import "../layout/header";
+@import "../layout/slider";
+@import "../components/confirm";
+@import "../layout/keyboard_pwd";
+*{
+    font-family:"Microsoft YaHei", "Helvetica Neue", "Helvetica", "sans-serif", "arial", "宋体";
+    color:$color333;
+}
+
+html,body{
+    height:100%;
+}
+.ds-none{
+    display: none!important;
+}
+.unvisiable{
+    visibility: hidden !important;
+}
+.mui-content{
+//  padding-left:$length15;
+//  padding-right:$length15;
+    background:$colorfff;
+    height:100%;
+}
+.mui-popup-button{
+    color:$jstMainColor;
+}
+.mui-popup-button.mui-popup-button-bold{
+    color:$jstMainColor;
+}
+/*轮播图*/
+.mui-slider{
+//  height:4*$length50 + $length35;
+}
+.mui-slider .mui-slider-group .mui-slider-item{
+    padding:0 $length15;
+    height:4*$length40 + $length4;
+}
+.card-list{
+    height:4*$length40 + $length4;
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    .card-num{
+        color: $colorfff;
+        font-size:$fontSize24;
+        position: absolute;
+        left:$length20;
+        top:$length60 + $length8;
+    }
+    .card-state{
+        width:$length50;
+        height:$length50;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        background-position: center;
+        position: absolute;
+        right:0;
+        top:$length10;
+    }
+    .as-main{
+        width:$length60;
+        height:$length22;
+        color: $colorfff;
+        font-size:$fontSize11;
+        border: 1px solid $colorfff;
+        border-radius: $length15;
+        text-align: center;
+        line-height: $length22;
+        position: absolute;
+        left:$length20;
+        top:2*$length40 + $length16;
+    }
+    .card-bill{
+        width:$length60 + $length10;
+        height:$length30;
+        color: $colorfff;
+        font-size:$fontSize14;
+        text-align: right;
+        line-height: $length30;
+        position: absolute;
+        right:$length20;
+        top:2*$length40 + $length16;
+    }
+    .card-ycbill{
+        color: $jstMainColor;
+    }
+}
+.zc-main{
+    background-image:url(../../img/bg/mcard01.png);
+}
+.zc-list1{
+    background-image:url(../../img/bg/mcard02.png);
+}
+.zc-list2{
+    background-image:url(../../img/bg/mcard03.png);
+}
+.gs-list{
+    background-image:url(../../img/bg/mcard04.png);
+}
+.yc-list{
+    background-image:url(../../img/bg/mcard05.png);
+}
+.state-main{
+    background-image: url(../../img/logo/mr.png);
+}
+.state-gs{
+    background-image: url(../../img/logo/gs.png);
+}
+.state-yc{
+    background-image: url(../../img/logo/yc.png);
+}
+/*一张卡*/
+.one-cell{
+    
+    .one-card{
+        position:relative;
+        height:3*$length50 + $length4;        
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        background-position: center;
+        .one-num{
+            font-size:$fontSize24;
+            color:$colorfff;
+            position:absolute;
+            top:$length60;
+            left:$length22;
+        }
+        .one-bill{
+            font-size:$fontSize14;
+            color:$colorfff;
+            position:absolute;
+            top:$length60 + $length40;
+            right:$length22;
+        }
+        .one-ycbill{
+            color:$jstMainColor;
+        }
+    }
+    .one-main{
+       background-image:url(../../img/bg/card01.png); 
+    }
+    .one-gs{
+        background-image:url(../../img/bg/ncard02.png);
+    }
+    .one-yc{
+        background-image:url(../../img/bg/ncard03.png);
+    }
+}
+
+/*账户信息*/
+.acc-cell{
+    padding:0 $length15;
+    margin-top:$length20;
+    border-bottom: 1px solid $jstBorderColor;
+    .acc-col{
+        width:33.3%;
+        float:left;
+        .acc-title{
+            font-size: $fontSize11;
+        }
+        .balance{
+            font-size: 2*$fontSize10;
+            margin:$length10 0;
+        }
+        .acc-btn{
+            width:$length60 + $length10;
+            height:$length28;
+            font-size: $fontSize14;
+            border: 1px solid #EA5920;
+            color:$jstMainColor;
+            line-height: $length28;
+            border-radius: $length8 + $length4;
+            text-align: center;
+            margin:0 auto;
+        }
+        .acc-ycbtn{
+            color: $jstBorderColor;
+            border:1px solid $jstBorderColor;
+        }
+    }
+}
+/*操作类型*/
+.oper-cell{
+    
+    .oper{
+        padding:0 $length15;
+        border-bottom: 1px solid $jstBorderColor;
+        &:active{
+            background:#E3E3E3;
+        }
+        .oper-txt{
+            float: left;
+            height:$length50;
+            line-height: $length50;
+            width:48%;
+        }
+        .oper-icon{
+            float:right;
+            width:48%;
+            height:$length50;
+           // background-image: url(../../img/icon/fanhui2.png);
+           // background-size: $length3+$length4 $length13;
+           // background-position: right center;
+            background-repeat: no-repeat;
+        }
+    }
+}
+/*绑卡*/
+.bindcard-cell{
+    width:2*$length60 + $length10;
+    position: fixed;
+    bottom: 0;
+    left:50%;
+    margin-left:-3.25rem;
+    z-index: 100;
+    .bindcard{
+        width:2*$length60 + $length10;
+        height:$length22 +$length20;
+        background-image:url(../../img/bg/bcard01.png);
+        background-position: center;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        margin:0 auto;
+        
+        &:active{
+            background-image:url(../../img/bg/bcard02.png);
+        }
+    }
+}

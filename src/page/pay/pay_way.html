@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>支付</title>
+
+		<meta name="author" content="devloper@jieshunpay.com">
+
+		<!-- 为移动设备添加 viewport -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<!-- 关闭电话号码识别： -->
+		<meta content="telephone=no" name="format-detection">
+		<!-- 邮箱识别： -->
+		<meta content="email=no" name="format-detection">
+		<link rel="stylesheet" href="../../css_output/base/base.css" />
+		<link rel="stylesheet" href="../../css_output/page/pay_way.css" inline/>
+		<link rel="stylesheet" href="../../css_output/module/popup_jst_payway_list.css" inline/>
+	</head>
+
+	<body class="mui-fullscreen">
+
+		<!--页面主结构开始-->
+		<div id="app" class="mui-views">
+			<div class="mui-view">
+				<div class="mui-navbar">
+				</div>
+				<div class="mui-pages">
+				</div>
+			</div>
+		</div>
+		<!--页面主结构结束-->
+
+		<!--单页面开始-->
+		<!--收银台入口，支付方式-->
+		<div id="main" class="mui-page">
+			<!--页面标题栏开始-->
+
+			<header class="mui-navbar-inner mui-bar mui-bar-nav header">
+				<a class="back mui-icon mui-icon-back mui-left mui-action-back"></a>
+				<p class="mui-center mui-title">捷顺收银台</p>
+			</header>
+
+			<!--页面标题栏结束-->
+			<!--页面主内容区开始-->
+			<div class="mui-page-content">
+
+				<section class="top-cell">
+					<p class="t-c-product mui-ellipsis pay-pro-name-value"></p>
+					<p class="t-c-money pay-money-value">0.00元</p>
+				</section>
+
+				<article class="tip">选择支付方式</article>
+				<ul class="table-cell-view" id="mainViewSelectPayWay">
+					<li class="cell-item icon-right" payType="1">
+						<img src="../../img/icon/icon_jst_pay.png" class="cell-img" />
+						<span class="cell-right">捷顺通支付</span>
+					</li>
+				</ul>
+			</div>
+			<!--页面主内容区结束-->
+		</div>
+
+		<!--单页面开始-->
+		<!--支付信息-->
+		<div id="jstPayView" class="mui-page">
+			<!--页面标题栏开始-->
+
+			<header class="mui-navbar-inner mui-bar mui-bar-nav header">
+				<a class="back mui-icon mui-icon-back mui-left mui-action-back"></a>
+				<p class="mui-center mui-title">支付信息</p>
+			</header>
+
+			<!--页面标题栏结束-->
+			<!--页面主内容区开始-->
+			<div class="mui-page-content">
+
+				<section class="top-cell">
+					<p class="t-c-product mui-ellipsis">需付款</p>
+					<p class="t-c-money pay-money-value">0.00元</p>
+				</section>
+
+				<ul class="table-cell-view" id="mainViewSelectPayWay">
+					<li class="cell-item" payType="1">
+						<span class="cell-left">商品信息</span>
+						<span class="cell-right mui-ellipsis pay-pro-name-value text-right"></span>
+					</li>
+
+					<li class="cell-item icon-right" payType="1" id="jstSelectPayway">
+						<span class="cell-left">付款方式</span>
+						<span class="cell-right mui-ellipsis text-right" id="jstDefaultPayWay"></span>
+					</li>
+				</ul>
+
+				<section class="btn-cell">
+					<div class="btn disabled" id="confirmPay">确认支付</div>
+				</section>
+
+			</div>
+			<!--页面主内容区结束-->
+		</div>
+
+		<!--支付方式-->
+		<div id="payWay" class="mui-page">
+
+			<header class="mui-navbar-inner mui-bar mui-bar-nav header">
+				<a class="back mui-icon mui-icon-back mui-left mui-action-back"></a>
+				<p class="mui-center mui-title">选择支付方式</p>
+			</header>
+
+			<div class="mui-page-content">
+				<section id="payWayDataList">
+				</section>
+
+			</div>
+		</div>
+
+		<div id="payWaiting" class="mui-page">
+			<header class="mui-navbar-inner mui-bar mui-bar-nav header">
+				<a class="back mui-icon mui-icon-back mui-left mui-action-back"></a>
+				<p class="mui-center mui-title">付款中</p>
+			</header>
+			<div class="mui-page-content">
+				<div class="wait-iconbox">
+					<p><img src="../../img/icon/icon_loading.gif" /></p>
+				</div>
+				<div class="wait-info">付款中...</div>
+			</div>
+		</div>
+
+		<div id="payResult" class="mui-page">
+
+			<header class="mui-navbar-inner mui-bar mui-bar-nav header">
+				<a class="back mui-icon mui-icon-back mui-left mui-action-back"></a>
+				<p class="mui-center mui-title">付款结果</p>
+			</header>
+
+			<div class="mui-page-content">
+				<section class="pay-result">
+					<!--<p class="text" id="payResultText"></p>-->
+					<div id="pay-success-box" class="pay-success pay-hidden">
+						<div class="pay-s-icon">
+							<p><img src="../../img/icon/icon_succeed.png" /></p>
+						</div>
+						<div class="pay-s-info">付款成功！</div>
+					</div>
+					<div id="pay-fail-box" class="pay-fail pay-hidden">
+						<div class="pay-f-icon">
+							<p><img src="../../img/icon/icon_error.png" /></p>
+						</div>
+						<div class="pay-f-info">非常抱歉，出了点小问题，<br />请返回重新支付</div>
+						<div id="pay-backpay" class="pay-f-btn">返回</div>
+					</div>
+				</section>
+			</div>
+		</div>
+
+		<!--MUI-->
+		<script src="../../js/vendors/mui.3.2.0.js"></script>
+		<script src="../../js/vendors/mui.view.js "></script>
+		<!-- 自定义js -->
+		<script src="../../js/common.js"></script>
+		<script type="text/javascript" src="../../js/pay_way.js"></script>
+	</body>
+
+</html>

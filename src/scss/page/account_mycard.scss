@@ -1,0 +1,221 @@
+@import '../base/param';
+@import "../layout/header";
+@import "../layout/page_view";
+@import "../sprite/sprite";
+@import "../components/confirm";
+@import "../layout/keyboard_pwd";
+%borderBottom {
+    border-bottom: 1px solid $borderColor;
+}
+.card-bgwhite {
+    background: $colorfff !important;
+}
+.nobind-img {
+    width: 100%;
+    text-align: center;
+    margin-top: $length75;
+    img {
+        width: 25%;
+        height: auto;
+    }
+}
+.nobind-text {
+    width: 100%;
+    margin-top: $length25;
+    font-size: $fontSize12;
+    color: $color666;
+    line-height: $length16;
+    text-align: center;
+}
+.card-list {
+    background-color: $colorfff;
+    @extend %borderBottom;
+}
+.card-item {
+    margin-top: 1rem;
+    position: relative;
+    .card-box {
+        border-top-left-radius: $length8;
+        border-top-right-radius: $length8;
+        width: 90%;
+        margin: auto;
+        overflow: hidden;
+        .card-logo {
+            width: 20%;
+            overflow: hidden;
+            display: inline-block;
+            text-align: right;
+            vertical-align: top;
+            padding-top: $length15;
+            .card-picbox {
+                width: $length40;
+                height: $length40;
+                overflow: hidden;
+                display: inline-block;
+                border-radius: $length25;
+                background: rgba(255,255,255,0.9);
+                text-align: center;
+                span {
+                    height: 100%;
+                    display: inline-block;
+                    vertical-align: middle;
+                }
+                img {
+                    width: 81.25%;
+                    height: auto;
+                    display: inline-block;
+                    vertical-align: middle;
+                }
+            }
+        }
+        .card-info {
+            width: 75%;
+            overflow: hidden;
+            display: inline-block;
+            color: #fff;
+            vertical-align: middle;
+            padding-top: $length20;
+            padding-left: $length8;
+            .card-name {
+                font-size: $fontSize16;
+            }
+            .card-type {
+                padding-top: $length5;
+                font-size: $fontSize11;
+            }
+            .card-code {
+                padding-top: $length16;
+                font-size: $fontSize16;
+                padding-bottom: $length24;
+            }
+        }
+    }
+    .card-blue {
+        background: linear-gradient(#5391d0, #39639e);
+    }
+    .card-red {
+        background: linear-gradient(#fd6b6b, #e94444);
+    }
+    .card-green {
+        background: linear-gradient(#55c6a5, #39b26a);
+    }
+    .card-purple {
+        background: linear-gradient(#7e349a, #56306b);
+    }
+    .card-yellow {
+        background: linear-gradient(#e6621c, #dd521f);
+    }
+    .card-shadow {
+        width: 100%;
+        height: $length30;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 100%);
+    }
+}
+.card-info-page {
+    .card-blue {
+        background: #4a7dbc !important;
+    }
+    .card-red {
+        background: #f25555 !important;
+    }
+    .card-green {
+        background: #17a982 !important;
+    }
+    .card-purple {
+        background: #75338f !important;
+    }
+    .card-yellow {
+        background: #e95b20 !important;
+    }
+}
+.card-desbox {
+    width: 100%;
+    overflow: hidden;
+    background: $colorfff;
+    .card-logo {
+        width: 20%;
+        overflow: hidden;
+        display: inline-block;
+        text-align: right;
+        vertical-align: top;
+        padding-top: $length30;
+        .card-picbox {
+            width: $length40;
+            height: $length40;
+            overflow: hidden;
+            display: inline-block;
+            border-radius: $length25;
+            background: rgba(255,255,255,0.9);
+            text-align: center;
+            span {
+                height: 100%;
+                display: inline-block;
+                vertical-align: middle;
+            }
+            img {
+                width: 81.25%;
+                height: auto;
+                display: inline-block;
+                vertical-align: middle;
+            }
+        }
+    }
+    .card-info {
+        width: 75%;
+        overflow: hidden;
+        display: inline-block;
+        color: #fff;
+        vertical-align: middle;
+        padding-top: $length35;
+        padding-left: $length8;
+        .card-name {
+            font-size: $fontSize16;
+        }
+        .card-type {
+            padding-top: $length5;
+            font-size: $fontSize11;
+        }
+        .card-code {
+            padding-top: $length16;
+            font-size: $fontSize24;
+            padding-bottom: $length24;
+        }
+    }
+    .card-accbox {
+        width: 90%;
+        height: $length50;
+        line-height: $length50;
+        overflow: hidden;
+        margin: auto;
+        .card-acctext {
+            font-size: $fontSize14;
+            color: $color333;
+            float: left;
+        }
+        .card-accnum {
+            font-size: $fontSize14;
+            color: $color666;
+            float: right;
+        }
+    }
+    .bottom-line {
+        @extend %borderBottom;
+    }
+}
+.card-btnbox {
+    width: 100%;
+    overflow: hidden;
+    background: $colorfff;
+    margin-top: $length20;
+    .card-delbtn {
+        width: 90%;
+        height: $length50;
+        text-align: center;
+        line-height: $length50;
+        font-size: $fontSize14;
+        color: $color333;
+    }
+}

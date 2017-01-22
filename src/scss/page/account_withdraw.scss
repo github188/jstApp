@@ -1,0 +1,99 @@
+@import '../base/param';
+@import "../layout/header";
+@import "../sprite/sprite";
+@import "../layout/input";
+@import "../layout/keyboard_pwd";
+%borderBottom {
+    border-bottom: 1px solid $borderColor;
+}
+//mui重写
+.mui-input-group .mui-input-row:after {
+    height: 0;
+}
+.top-cell {
+    background-color: $mainColor;
+    line-height: $length40;
+    color: $colorfff;
+    padding: 0 $length15;
+}
+.table-cell {
+    display: flex;
+    background-color: $colorfff;
+    line-height: $length40;
+    padding: 0 $length15;
+    @extend %borderBottom;
+    span {
+        display: inline-block;
+    }
+    .cell-left {
+        flex: 2;
+    }
+    .cell-right {
+        flex: 3;
+        text-align: left;
+        color: $color666;
+        vertical-align: top;
+        input {
+            margin-bottom: 0;
+            border: none;
+            padding: $length5 0;
+        }
+    }
+}
+//提现银行卡
+.card-cell {
+    display: flex;
+    background-color: $colorfff;
+    line-height: $length55;
+    padding: 0 $length15;
+    @extend %borderBottom;
+    span {
+        display: inline-block;
+    }
+    .card-icon {
+        display: none;
+        width: $length30;
+        img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+    }
+    .card-info {
+        padding: 0 $length10;
+        flex: 1;
+    }
+}
+.input-view {
+    margin: $length15;
+    .title {
+        line-height: $length40;
+        font-size: $fontSize12;
+    }
+}
+//确认铵钮
+.btn {
+    background-color: $mainColor;
+    line-height: $length40;
+    border-radius: $length5;
+    margin: $length15;
+    text-align: center;
+    color: $colorfff;
+}
+.btn.disabled {
+    opacity: 0.5;
+}
+//提现说明
+.tips {
+    line-height: $length15;
+    font-size: $fontSize12;
+    margin: $length15;
+}
+//提现金额
+.withdraw-money {
+    margin: $length15 auto;
+    text-align: center;
+    font-size: $fontSize24;
+    .money {
+        color: $mainColor;
+    }
+}

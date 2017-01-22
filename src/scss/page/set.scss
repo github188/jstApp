@@ -1,0 +1,104 @@
+@import '../base/param';
+@import "../layout/header";
+@import "../sprite/sprite";
+@import "../layout/page_view";
+
+$bgColor: #e3e3e3; //背景色
+
+%borderBottom {
+    border-bottom: 1px solid $borderColor;
+}
+.mui-content,
+.mui-page,
+.mui-page-content,
+.mui-pages,
+.mui-view,
+.mui-views,
+body {
+    background: $bgColor;
+}
+
+.header {
+    border: none;
+}
+
+.mui-content {
+    margin-top: $length15;
+}
+.table-cell-view {
+    margin: $length20 0;
+    background-color: $colorfff;
+    font-size: $fontSize14;
+    .table-cell {
+        a {
+            display: flex;
+            flex: 1;
+        }
+        display: flex;
+        line-height: $length50;
+        margin: 0 $length15;
+        @extend %borderBottom;
+        .cell-left {
+            flex: 1;
+        }
+        .cell-right {
+            text-align: right;
+            color: #999;
+            vertical-align: top;
+        }
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+
+}
+.logout {
+    line-height: $length50;
+    text-align: center;
+    color: $color666;
+}
+.about-bg-white {
+    background: $colorfff;
+}
+.about-barbox {
+    width: 100%;
+    overflow: hidden;
+    img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+}
+.about-ti {
+    width: 100%;
+    overflow: hidden;
+    padding-top: $length25;
+    .about-tibox {
+        width: 83%;
+        margin: auto;
+        overflow: hidden;
+        p {
+            color: $color666;
+            line-height: $length20;
+            span {
+                color: $mainColor;
+            }
+        }
+    }
+}
+.about-con {
+    width: 100%;
+    overflow: hidden;
+    padding-top: $length17;
+    .about-conbox {
+        width: 83%;
+        margin: auto;
+        overflow: hidden;
+        p {
+            text-indent: 2em;
+            color: $color666;
+            line-height: $length17;
+            text-align: justify;
+        }
+    }
+}

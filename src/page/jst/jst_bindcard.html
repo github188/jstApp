@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>捷顺通绑卡</title>
+
+		<meta name="author" content="devloper@jieshunpay.com">
+
+		<!-- 为移动设备添加 viewport -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<!-- 关闭电话号码识别： -->
+		<meta content="telephone=no" name="format-detection">
+		<!-- 邮箱识别： -->
+		<meta content="email=no" name="format-detection">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../../css_output/base/base.css" />
+		<link rel="stylesheet" href="../../css_output/page/jst_bindcard.css" inline/>
+	</head>
+
+	<body>
+		<header class="mui-navbar-inner mui-bar mui-bar-nav header">
+			<a class="back mui-icon mui-icon-back mui-action-back"></a>
+			<p class="mui-title">捷顺通绑卡</p>
+		</header>
+		<div class="mui-content">
+			<!--顶部-->
+			<section class="ban-cell">
+				<div class="card-title">卡号</div>
+				<div class="card-num"></div>
+			</section>
+			<!--信息输入-->
+			<section class="input-cell">
+				<div class="class-cell clearfloat">
+					<div class="input-tips">卡号</div>
+					<div class="fill-cell">
+						<input type="tel" id="cardNo" placeholder="请输入19位捷顺通卡号" />
+						<p id="cardNoErrorTips" class="err-tips"></p>
+					</div>
+				</div>
+				<div class="class-cell clearfloat">
+					<div class="input-tips">密码</div>
+					<div class="fill-cell right">
+						<input type="password" id="cardPwd" placeholder="请输入6位数字密码" />
+						<p class="err-tips"></p>
+					</div>
+				</div>
+			</section>
+			<!--密码提示-->
+			<section class="tips-cell">
+				<div class="pwd-tips">
+					<i></i>
+					<span id="unknowPwd">不知道卡密码？</span>
+				</div>
+			</section>
+			<!--确定按钮-->
+			<section class="btn-cell">
+				<div id="confirmBtn" class="btn">确定</div>
+			</section>
+
+		</div>
+
+		<!--忘记密码提示框-->
+		<section class="forget-cell" id="forgetPwdConfirm"><div class="forget-tips">1.如未修改卡密码，请见卡身背面刮条，输入6位数字卡密码。</div><div class="forget-img"><img src="../../img/bg/jstcard.png" /></div><div class="forget-tips">2.如已修改并忘记卡密码，请点找回密码。</div></section>
+
+		<!--MUI-->
+		<script src="../../js/vendors/mui.3.2.0.js"></script>
+		<script src="../../js/vendors/mui.actionsheet.popover.js"></script>
+		<!-- 自定义js -->
+		<script src="../../js/common.js"></script>
+		<script type="text/javascript" src="../../js/jst_bindcard.js"></script>
+	</body>
+
+</html>

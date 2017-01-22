@@ -1,0 +1,51 @@
+@import '../base/param';
+@import "../layout/header";
+%borderBottom {
+    border-bottom: 1px solid $borderColor;
+}
+
+.mui-content,
+body {
+    background: $contentBgcolor;
+}
+
+.tip {
+    margin: 0 $length16;
+    line-height: $length40;
+    color: $tipColor878787;
+}
+
+.card-list {
+
+    background-color: $colorfff;
+    padding: 0 $length15;
+
+    .card-item {
+        display: flex;
+        align-items: center;
+        height: $length55;
+        border-bottom: 1px solid $borderColor;
+        .card-img {
+            display: inline-block;
+            width: $length32;
+            height: $length32;
+            margin-right: $length8;
+        }
+        .card-info {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            .card-name {
+                font-size: $fontSize14;
+            }
+            .card-type {
+                margin-top: $length12 / 2;
+                color: $tipColor878787;
+            }
+        }
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+
+}

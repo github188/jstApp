@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	</head>
+
+	<body>
+		<script>
+			/**
+			 * APP入口
+			 * varstion 1.0.0
+			 * by Max
+			 * lijingming@yg0001.com
+			 */
+
+			(function() {
+				var subpages = ['lanuch.html']; //test:http://10.101.130.8:8082/apph5/page/home/
+				var httpUrl = "http://10.101.130.33:8082/apph5/page/home/";
+				var main = {
+					//初始化执行
+					init: function() {
+						var self = this;
+
+						if(window.plus) {
+							self.plusReady();
+						} else {
+							document.addEventListener('plusready', self.plusReady, false);
+						}
+					},
+
+					plusReady: function() {
+
+						//创建子页面，首个选项卡页面显示，其它均隐藏；
+						var currentWeb = plus.webview.currentWebview();
+						var id = subpages[0],
+							pageUrl = httpUrl + id;
+						var sub = plus.webview.create(pageUrl, id);
+
+						var wait = plus.nativeUI.showWaiting("加载中,请稍候...", {
+							padlock: true
+						});
+						sub.addEventListener("loaded", function(e) {
+							wait.close();
+						}, false);
+
+						currentWeb.append(sub);
+						sub.show("fade-in", 300);
+						plus.navigator.closeSplashscreen();
+					}
+				};
+				main.init();
+
+			})();
+			//end
+		</script>
+	</body>
+
+</html>

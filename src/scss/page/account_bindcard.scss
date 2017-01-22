@@ -1,0 +1,252 @@
+@charset "utf-8";
+@import '../base/param';
+@import "../layout/header";
+@import "../layout/input";
+@import "../components/confirm";
+@import "../layout/page_view";
+@import "../layout/keyboard_pwd";
+
+.mui-page,
+.mui-page-content,
+.mui-pages,
+.mui-view,
+.mui-views {
+    background: $colorfff;
+}
+
+//绑定提示
+.card-tip {
+    background: $tipBgColorf4f4f4;
+    padding: 0 $length16;
+    line-height: $length40;
+    color: $tipColor878787;
+}
+
+//输入框
+.input-cell {
+    margin: $length20 $length16 0;
+    .mui-input-row {
+        text-align: center;
+        margin-bottom: $length20;
+    }
+    input {
+        border: none;
+        background: none;
+        border-radius: 0;
+        padding: 0 2rem 0 0;
+        margin-bottom: 0;
+    }
+    .input-title {
+        text-align: left;
+        color: $color666;
+    }
+
+    .input-tips {
+        display: block;
+        border-bottom: 1px solid $borderColor;
+        text-align: left;
+        font-size: $fontSize12;
+        width: 100%;
+    }
+    .error {
+        padding-bottom: $length8;
+        color: $mainColor;
+    }
+    .normal-tip {
+        padding-bottom: $length8;
+        color: $placeholderColor;
+    }
+    .mui-icon.mui-icon-eye {
+        display: none;
+    }
+}
+
+.card-type-container {
+
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid $borderColor;
+    background: $mainColor;
+    height: $length74;
+    .card-img-box {
+        width: $length40;
+        height: $length40;
+        background: $colorfff;
+        padding: $length4;
+        border-radius: $length40 / 2;
+        margin-left: $length16;
+        margin-right: $length8;
+    }
+    .card-img {
+        display: inline-block;
+        width: $length32;
+        height: $length32;
+    }
+    .card-info {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        .card-name {
+            font-size: $fontSize16;
+            font-weight: 600;
+            color: $colorfff;
+        }
+        .card-type-tip {
+            margin-top: $length4;
+            color: $colorfff;
+            font-size: $fontSize11;
+
+        }
+    }
+    &:last-child {
+        border-bottom: none;
+    }
+
+}
+
+//信用卡输入
+.input-credit {
+    display: flex;
+    .credit-item {
+        flex: 1;
+    }
+    .credit-expiry {
+        height: $length40;
+        line-height: $length40;
+        text-align: left;
+        .c-e-month,
+        .c-e-year {
+            display: inline-block;
+            width: 25%;
+            color: $placeholderColor;
+        }
+        .c-e-month-text,
+        .c-e-year-text {
+            display: inline-block;
+            font-weight: normal;
+            color: $color666;
+            width: 25%;
+        }
+        .c-e-year-text {
+            text-align: right;
+        }
+        .has-value {
+            color: $color333;
+            font-size: $fontSize14;
+        }
+    }
+}
+
+//.input-cell{
+//  .inptips{
+//      padding:$length15 0;
+//      span{
+//          
+//      }
+//      a{
+//          color: $mainColor;
+//      }
+//  }
+//  
+//  .mui-input-group{
+//      
+//      .mui-input-row{
+//          label{
+//              width:30%;
+//          }
+//          input{
+//              width:70%;
+//          }
+//         
+//          &:after{
+//              height:0;
+//          }
+//      }
+//      .bort{
+//          border-bottom:1px solid #c8c7cc;
+//      }
+//  }
+//}
+
+//确认铵钮
+.btn-cell {
+    margin: $length55 auto 0;
+    width: 90%;
+    .btn {
+        background-color: $mainColor;
+        color: $colorfff;
+        line-height: $length40;
+        text-align: center;
+        border-radius: $length20;
+        font-size: $fontSize16;
+    }
+    .btn.disabled {
+        opacity: 0.5;
+    }
+}
+
+//保密提示
+.remain-info-tip {
+    margin-top: $length20;
+    line-height: $length20;
+    text-align: center;
+}
+
+//协议
+.agreement-tip {
+    text-align: center;
+    padding: 0 $length15;
+    line-height: $length40;
+    .agreement {
+        color: $mainColor;
+    }
+}
+
+.icon-ask {
+    position: relative;
+    .icon-ask-container {
+        @include askIcon;
+    }
+    .safe-code-ask {
+        right: 30%;
+    }
+}
+
+.icon-right-top-close {
+    right: 0;
+    @include closeWindowIcon;
+}
+
+//弹窗样式重写
+.mui-popup-title {
+    position: relative;
+    font-size: $fontSize17;
+    color: $color333;
+    line-height: $length50;
+    border-bottom: 1px solid $borderColor;
+}
+.mui-popup {
+    width: 90%;
+}
+.mui-popup-inner {
+    padding: 0 $length16 $length20;
+}
+.mui-popup-inner:after {
+    height: 0;
+}
+.mui-popup-buttons {
+    display: none;
+}
+.mui-popup-text {
+    margin: 0 !important;
+    color: $color666;
+    font-size: $fontSize12;
+    text-align: left;
+    white-space: normal !important;
+    .popup-content {
+        margin: $length20 0;
+    }
+    img {
+        max-width: 100%;
+    }
+}

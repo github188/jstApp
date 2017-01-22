@@ -1,0 +1,662 @@
+/* CSS Document */
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    font-style: normal;
+}
+input,
+button {
+    border: 0;
+    border-radius: 0;
+    padding: 0;
+    margin: 0;
+}
+.box100 {
+    width: 100%;
+    overflow: hidden;
+}
+.fimgbox {
+    width: 100%;
+    overflow: hidden;
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+.fs_14 {
+    font-size: 14px;
+}
+.n_one {
+    display: none;
+}
+.bg_blue {
+    background: #4188d7;
+}
+.fc_blue {
+    color: #4188d7;
+}
+.w90 {
+    width: 90% !important;
+}
+.w67 {
+    width: 67% !important;
+}
+.w62 {
+    width: 62% !important;
+}
+.w40 {
+    width: 40% !important;
+}
+.w29 {
+    width: 29% !important;
+}
+.ml1 {
+    margin-left: 1%;
+}
+.mr5 {
+    margin-right: 5%;
+}
+.m_t2 {
+    margin-top: 2px;
+}
+.m_t4 {
+    margin-top: 4px;
+}
+.m_t30 {
+    margin-top: 30px;
+}
+.m_t40 {
+    margin-top: 40px;
+}
+.m_t55 {
+    margin-top: 55px;
+}
+.m_b10 {
+    margin-bottom: 10px;
+}
+.p_t20 {
+    padding-top: 20px;
+}
+/* sui mobile 修改*/
+div.toast {
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 0.25rem;
+}
+/*公共样式*/
+.getcode {
+    background: #4188d7;
+    color: #fff;
+    height: 32px;
+    border-radius: 6px;
+    font-size: 0.7rem;
+}
+.jstapp_sub {
+    > div {
+        overflow: hidden;
+        margin: auto;
+    }
+    .jstapp_btn {
+        width: 100%;
+        height: 46px;
+        color: #fff;
+        border-radius: 4px;
+        font-size: 0.9rem;
+        &:disabled {
+            background: #94B3F8 !important;
+        }
+    }
+}
+.jstapp_popup {
+    width: 290px !important;
+    height: auto !important;
+    left: 50% !important;
+    margin-left: -145px !important;
+    top: 80px !important;
+    padding-bottom: 10px;
+    .jstapp_popup_ti {
+        font-size: 1rem;
+        font-weight: normal;
+        padding: 15px;
+    }
+    p {
+        margin: 0;
+        padding: 5px 15px;
+    }
+}
+.acc_bindinp {
+    margin-top: 12px;
+    .acc_inpinfo {
+        color: #999;
+        padding-left: 5%;
+        padding-bottom: 4px;
+        font-size: 14px;
+    }
+    .acc_inpbox {
+        background: #fff;
+        height: 42px;
+        padding-top: 3px;
+        margin-top: 1px;
+        span {
+            width: 20%;
+            height: 26px;
+            display: block;
+            margin-left: 5%;
+            margin-top: 5px;
+            float: left;
+        }
+        input {
+            width: 70%;
+            height: 26px;
+            line-height: 22px;
+            margin-top: 5px;
+            float: left;
+            &:disabled {
+                color: #0547A1;
+                background: #fff;
+            }
+        }
+    }
+    .acc_inpremind p {
+        text-align: center;
+        color: #999;
+        font-size: 14px;
+        margin: 2px 0 0;
+    }
+}
+.cross_list {
+    margin-top: 12px;
+    .cross_listinfo {
+        color: #999;
+        padding-left: 5%;
+        padding-bottom: 4px;
+        font-size: 14px;
+    }
+    .cross_listbox {
+        background: #fff;
+        height: 42px;
+        padding-top: 3px;
+        margin-top: 1px;
+        span {
+            height: 26px;
+            display: block;
+            margin-left: 5%;
+            margin-top: 5px;
+        }
+    }
+}
+.miss_checkcode {
+    margin: 0;
+    padding-top: 8px;
+    height: 36px;
+}
+.key_eyes {
+    width: 22px;
+    height: 22px;
+    display: block;
+    background-image: url("../../img/icon/key_ceyes.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.xh-numkeyboardbox {
+    width: 100%;
+    max-width: 640px;
+    margin: auto;
+}
+/*注册页*/
+.reg_info {
+    background: #fff;
+    padding-top: 6px;
+    > div {
+        width: 95%;
+        margin-left: 5%;
+        height: 54px;
+        padding-top: 10px;
+        border-bottom: 1px solid #dcdcdc;
+        overflow: hidden;
+        &:last-child {
+            border: 0;
+        }
+        input {
+            height: 26px;
+        }
+    }
+}
+.reg_refer> div p {
+    font-size: 0.7rem;
+    color: #adadad;
+    a {
+        color: #619ee1;
+    }
+}
+/*登陆页*/
+.loginbox {
+    background: #fff;
+    margin-top: 55px;
+    > div {
+        width: 95%;
+        margin-left: 5%;
+        height: 54px;
+        padding-top: 15px;
+        border-bottom: 1px solid #dcdcdc;
+        overflow: hidden;
+        &:last-child {
+            border: 0;
+        }
+        input {
+            height: 26px;
+        }
+    }
+}
+/*修改、找回登录密码*/
+.changebox {
+    background: #fff;
+    > div {
+        width: 95%;
+        margin-left: 5%;
+        height: 54px;
+        padding-top: 12px;
+        border-bottom: 1px solid #dcdcdc;
+        overflow: hidden;
+        &:last-child {
+            border: 0;
+        }
+        span {
+            width: 27%;
+            height: 26px;
+            display: block;
+            float: left;
+            margin-top: 2px;
+        }
+        input {
+            height: 26px;
+            float: left;
+        }
+    }
+    .getcode {
+        background: #4188d7;
+        color: #fff;
+        height: 32px;
+        border-radius: 6px;
+        font-size: 0.7rem;
+    }
+}
+/*.promptbox p{font-size:0.8rem;padding-left:5%;padding-bottom:5px;margin:0px;color:#999;}*/
+/*账户主页*/
+.acc_neckbox {
+    background: #fff;
+    padding-bottom: 10px;
+    .acc_mybal {
+        font-size: 16px;
+        margin: 10px 0 0;
+        padding-left: 10px;
+        color: #333;
+    }
+    .acc_balance {
+        text-align: center;
+        font-size: 48px;
+        min-height: 72px;
+    }
+}
+.acc_module {
+    display: flex;
+    flex-wrap: wrap;
+    .acc_modbox {
+        width: 30%;
+        margin: 2% 0 0 2%;
+        overflow: hidden;
+        a {
+            width: 100%;
+            height: 50px;
+            display: block;
+            border-radius: 5px;
+            line-height: 50px;
+            text-align: center;
+            background: #CFE9FA;
+        }
+    }
+}
+/*设置支付密码*/
+.accpay_pwti {
+    text-align: center;
+}
+.writebox {
+    width: 100%;
+    max-width: 640px;
+    overflow: hidden;
+    margin: auto;
+    position: relative;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    ul {
+        width: 80%;
+        margin: auto;
+        overflow: hidden;
+        text-align: center;
+        cursor: pointer;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        li {
+            width: 16%;
+            height: 46px;
+            display: inline-block;
+            background: #fff;
+            border: 1px solid #999;
+            border-left: 0;
+            &:first-child {
+                border-left: 1px solid #999;
+                /*border-top-left-radius:4px;border-bottom-left-radius:4px;*/
+            }
+            &.bgcur {
+                background: #fff url("../../img/icon/in_write.png") no-repeat center center;
+                background-size: 100% 40px;
+            }
+            i {
+                width: 10px;
+                height: 10px;
+                display: block;
+                background: #000;
+                border-radius: 10px;
+                margin: 18px auto auto;
+                &.n_one {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+/*.writebox ul li:last-child{border-top-right-radius:4px;border-bottom-right-radius:4px;}*/
+.keybbox {
+    width: 100%;
+    max-width: 640px;
+    background: #c9c9c9;
+    overflow: hidden;
+    margin: auto;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    .keyb_inp {
+        width: 33.156%;
+        height: 52px;
+        color: #000;
+        font-size: 28px;
+        background: #fff;
+        outline: none;
+        border: 0;
+        border-radius: 0;
+        -webkit-appearance: none;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        font-family: "Microsoft YaHei", "Helvetica Neue", "Helvetica", "sans-serif", "arial", "宋体";
+    }
+    .column {
+        margin-left: 0.266%;
+    }
+    .line {
+        margin-bottom: 1px;
+    }
+    input {
+        &.useless {
+            background: #dfdfdf;
+        }
+        &.keyb_del {
+            background: #dfdfdf url("../../img/icon/keyb_del.png") no-repeat center center;
+            background-size: 20% auto;
+        }
+        &.tbg_grey {
+            background: #dfdfdf;
+        }
+        &.tbg_del {
+            background: #fff url("../../img/icon/keyb_del.png") no-repeat center center;
+            background-size: 20% auto;
+        }
+    }
+}
+@media (min-width: 640px) {
+    .keybbox {
+        left: 50%;
+        margin-left: -320px;
+    }
+}
+/*我的银行卡*/
+.acc_mycard {
+    a.acc_mycard_btn {
+        width: 100%;
+        height: 46px;
+        line-height: 46px;
+        display: block;
+        padding-left: 15%;
+        background: #fff url("../../img/icon/acc_add.png") 7% 50% no-repeat;
+        background-size: auto 45%;
+    }
+    .acc_mycardlist li {
+        width: 90%;
+        overflow: hidden;
+        margin: auto;
+        a {
+            width: 100%;
+            height: 150px;
+            display: block;
+            background: #2E6283;
+            color: #fff;
+            border-radius: 5px;
+        }
+    }
+    .acc_mycardinfo {
+        text-align: center;
+        color: #999;
+    }
+}
+/*绑定银行卡*/
+.acc_showinp {
+    height: 0;
+    transition: height 0.8s;
+}
+/*充值、提现页*/
+.acc_flex {
+    display: flex !important;
+}
+.acc_flex1 {
+    flex: 1;
+}
+.acc_flex2 {
+    flex: 2;
+}
+.acc_flex4 {
+    flex: 4;
+}
+.flex_center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bg_white {
+    background: #fff;
+}
+.acc_txt_left {
+    text-align: left;
+}
+.acc_txt_right {
+    text-align: right;
+}
+.acc_txt_center {
+    text-align: center;
+}
+.acc_pad {
+    padding: 10px 0;
+    border-bottom: 1px solid #666;
+    width: 60%;
+    margin: 0 auto;
+}
+#cardMes {
+    margin: 0;
+    padding: 0;
+    background: #4188d7;
+    color: #fff;
+}
+.acc_fBank {
+    margin: 0;
+    width: 100%;
+    text-align: center;
+}
+#re_tips {
+    color: #666;
+    font-size: 14px;
+}
+.acc_btn-next {
+    width: 100%;
+    padding: 5px;
+    color: #fff;
+    height: 40px;
+    border: 0;
+}
+.bank_logo {
+    width: 30px;
+    height: 30px;
+    margin: 0 10px 0 0;
+    vertical-align: middle;
+}
+.acc_mRow {
+    padding: 5px 4%;
+    margin-top: 10px;
+}
+.acc_txt {
+    padding: 5px;
+    width: 100%;
+    text-align: center;
+}
+.acc_toPay {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background: #666;
+    /*opacity: 0.5;*/
+}
+.acc_payContent {
+    background: #fff;
+    padding: 10px;
+    margin: 0 auto;
+    color: #000;
+}
+#pwd {
+    text-align: center;
+    font-size: 16px;
+    border: 1px solid #666;
+    height: 30px;
+    opacity: 0;
+}
+.acc_mTitle {
+    font-size: 14px;
+}
+.acc_payPwd {
+    display: flex;
+    border: 1px solid #666;
+    padding: 5px;
+}
+.acc_payLi {
+    flex: 1;
+    height: 40px;
+    border-left: 1px solid #666;
+    line-height: 40px;
+    &:first-child {
+        border-left: none;
+    }
+}
+.acc_tips {
+    text-align: left;
+}
+#tab {
+    color: #4188d7;
+    display: inline-block !important;
+}
+.acc_bankCard {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #666;
+    text-align: center;
+}
+#showCard {
+    background: #fff;
+    width: 80%;
+    margin: 0 auto;
+}
+.acc_retry {
+    display: none;
+    width: 100%;
+    height: 100%;
+    background: #666;
+    position: absolute;
+    left: 0;
+    top: 0;
+    text-align: center;
+}
+.acc_reset {
+    background: #fff;
+    width: 70%;
+    margin: 15% auto;
+    padding: 10px 5px;
+}
+.acc_reBtn {
+    display: flex;
+    padding: 5px 10px;
+}
+#retry_btn,
+#forget_btn {
+    flex: 1;
+    margin: 0 20px;
+}
+.open-about {
+    opacity: 0.8;
+    background: #666;
+    a {
+        margin: 10px 0;
+    }
+}
+.open-list {
+    opacity: 1 !important;
+    background: #fff;
+    width: 80%;
+    margin: 14% auto;
+}
+.popup-pay {
+    opacity: 0.8;
+    background: #666;
+    .acc_layout {
+        background: #fff;
+        padding-bottom: 20px;
+    }
+}
+/*充值结果页*/
+.resultIcon {
+    padding: 20px 10%;
+    text-align: center;
+    i {
+        display: inline-block;
+        background: #666;
+        width: 200px;
+        height: 100px;
+    }
+}
+.resultCardId,
+.resultTips {
+    text-align: center;
+    span i {}
+}
+.resultBtn {
+    text-align: center;
+    display: flex;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    span,
+    i {
+        flex: 1;
+        margin: 10px;
+        background: #666;
+    }
+}

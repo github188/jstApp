@@ -1,0 +1,473 @@
+@import "../base/base";
+@import "../base/param";
+@import "../layout/header";
+@import "../components/confirm";
+/*mui样式重写*/
+.mui-popup-button {
+    color: $jstMainColor !important;
+}
+/*页面样式*/
+.left {
+    float: left;
+}
+.right {
+    float: right;
+}
+.click-orange:active {
+    background: $jstMainColor;
+    color: $colorfff;
+    border: 1px solid $jstMainColor;
+}
+.line-orange {
+    border: 1px solid $jstMainColor;
+}
+.line-gray {
+    border: 1px solid $jstBorderColor;
+}
+.fc-gray-878787 {
+    color: $tipColor878787;
+}
+.fc-gray-666666 {
+    color: $color666;
+}
+.fc-gray-dcdcdc {
+    color: #dcdcdc;
+}
+.fc-orange {
+    color: $jstMainColor;
+}
+.fc-yellow {
+    color: #f78d64;
+}
+.none {
+    display: none !important;
+}
+#marqueebox {
+    height: $length22;
+    position: relative;
+    width: 100%;
+    max-width: $maxwidth;
+    margin: auto;
+    overflow: hidden;
+    background-color: #ffe9e0;
+    #marqueestage {
+        width: 100%;
+        max-width: $maxwidth;
+        margin: auto;
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    #marqueestage>p {
+        width: 90%;
+        margin: auto;
+        height: $length22;
+        font-size: $fontSize12;
+        color: $color666;
+        line-height: $length22;
+    }
+}
+.card-bgbox {
+    width: 100%;
+    max-width: $maxwidth;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    .card-bgimg {
+        width: 100%;
+        overflow: hidden;
+    }
+    .card-bgimg img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+}
+.card-main {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 25%;
+    .card-info {
+        width: 82%;
+        margin: auto;
+    }
+    .card-balti {
+        width: 100%;
+        color: $colorfff;
+        height: $length16;
+        font-size: $length11;
+    }
+    .card-baltext {
+        height: $length26;
+        line-height: $length26;
+        font-size: $length26;
+        color: $colorfff;
+    }
+    .card-balnum {
+        float: left;
+    }
+    .card-pick {
+        height: $fontSize12;
+        line-height: $fontSize12;
+        font-size: $fontSize12;
+        margin-top: $length4;
+        float: right;
+    }
+    .card-icon {
+        width: $length18;
+        height: $length18;
+        margin-top: $length2;
+        display: inline-block;
+        overflow: hidden;
+        float: left;
+    }
+    .card-icon img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+    .card-code {
+        margin-left: $length3;
+        margin-top: $length2;
+        float: left;
+    }
+    .card-other {
+        width: $length14;
+        height: $length14;
+        display: inline-block;
+        overflow: hidden;
+        margin-left: $length3;
+        margin-top: $length2;
+        float: left;
+    }
+    .card-other img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+}
+.card-assist {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 8%;
+    .card-newbg {
+        width: 82%;
+        margin: auto;
+    }
+    .card-newti {
+        width: 100%;
+        color: $colorfff;
+        height: $length16;
+        font-size: $length14;
+    }
+    .card-newcode {
+        height: $length50;
+    }
+    .card-newinput {
+        width: 85%;
+        border: 0;
+        outline: none;
+        border-bottom: 1px solid #f5baa3;
+        background: rgba(0,0,0,0);
+        margin: $length8 0 0;
+        padding: 0 0 $length2;
+        border-radius: 0;
+        height: $length26;
+        line-height: $length26;
+        font-size: $fontSize19;
+        color: $colorfff;
+        float: left;
+        -webkit-user-select: text;
+    }
+    .card-delbtn {
+        width: 7%;
+        height: $length38;
+        line-height: $length38;
+        margin-top: $length10;
+        float: right;
+        display: inline-block;
+        overflow: hidden;
+        background: url("../../img/icon/micon_8.png") no-repeat;
+        background-size: 100% auto;
+    }
+    .card-delbtn img {
+        width: 100%;
+        height: auto;
+        display: block;
+        height: $length38;
+        line-height: $length38;
+        font-size: $length16;
+        display: inline-block;
+        background: url("../../img/icon/micon_8.png") no-repeat;
+        background-size: 100% auto;
+        margin-top: $length10;
+        float: right;
+    }
+}
+.inper-white::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+    color: #fe9267;
+}
+.inper-white:-moz-placeholder,
+textarea:-moz-placeholder {
+    color: #fe9267;
+}
+.inper-white::-moz-placeholder,
+textarea::-moz-placeholder {
+    color: #fe9267;
+}
+.inper-white:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+    color: #fe9267;
+}
+.card-host {
+    width: 100%;
+    max-width: $maxwidth;
+    margin: auto;
+    overflow: hidden;
+    .card-warn {
+        width: 90%;
+        height: $length24;
+        line-height: $length24;
+        font-size: $fontSize12;
+        margin: auto;
+    }
+}
+.card-list {
+    width: 100%;
+    max-width: $maxwidth;
+    margin: auto;
+    overflow: hidden;
+}
+.cardfare {
+    width: 100%;
+    max-width: $maxwidth;
+    margin: auto;
+    overflow: hidden;
+    padding-bottom: $length30;
+    li {
+        width: 28%;
+        margin-top: $length15;
+        margin-left: 3.5%;
+        padding: $length11 0;
+        background: #fff;
+        color: $tipColor878787;
+        text-align: center;
+        border: 1px solid #d3d3d3;
+        border-radius: $length20;
+        cursor: pointer;
+        float: left;
+    }
+    li .card-price {
+        height: $length24;
+        line-height: $length24;
+        font-size: $length18;
+    }
+    li .card-toacct {
+        height: $length14;
+        line-height: $length14;
+        font-size: $length11;
+    }
+    li.purchase p {
+        height: $length38;
+        line-height: $length38;
+    }
+    li.pickme {
+        background: $jstMainColor !important;
+        color: $colorfff !important;
+        border: 1px solid $jstMainColor !important;
+    }
+    li.pickme p.rechprice {
+        color: $colorfff !important;
+    }
+    li.sellout {
+        background: #fff !important;
+        color: $tipColor878787 !important;
+        border: 1px solid #d3d3d3 !important;
+    }
+    li.sellout p.rechprice {
+        color: $tipColor878787 !important;
+    }
+}
+.card-space {
+    width: 100%;
+    max-width: $maxwidth;
+    margin: auto;
+    overflow: hidden;
+    background: #e3e3e3;
+    padding-top: $length10;
+}
+.card-bill {
+    width: 100%;
+    max-width: $maxwidth;
+    margin: auto;
+    overflow: hidden;
+}
+.card-needpay {
+    width: 90%;
+    margin: auto;
+    height: $length28;
+    line-height: $length28;
+    font-size: $fontSize12;
+    margin-top: $length4;
+}
+.card-line {
+    width: 100%;
+    border-bottom: 1px solid $jstBorderColor;
+}
+.card-getacct {
+    width: 90%;
+    margin: auto;
+    height: $length28;
+    line-height: $length28;
+    font-size: $fontSize12;
+    margin: auto;
+}
+.card-btn {
+    width: 100%;
+    max-width: $maxwidth;
+    margin: auto;
+    overflow: hidden;
+    padding-top: $length24;
+    .card-paybtn {
+        width: 87%;
+        margin: auto;
+        display: block;
+        height: $length38;
+        line-height: $length38;
+        font-size: $length16;
+        text-align: center;
+        border-radius: $length25;
+    }
+}
+.card-bindcard {
+    height: $length50;
+    line-height: $length50;
+    font-size: $length16;
+    border-bottom: 1px solid $jstBorderColor;
+}
+.card-bindcode {
+    margin-left: 5%;
+    float: left;
+}
+.card-bindcur {
+    overflow: hidden;
+    width: $length16;
+    height: $length16;
+    margin-top: $length17;
+    margin-left: 5%;
+    float: left;
+    img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+}
+.card-bindti {
+    width: 90%;
+    margin: auto;
+    height: $length50;
+    line-height: $length50;
+    font-size: $length16;
+    text-align: center;
+    position: relative;
+}
+.card-bindout {
+    overflow: hidden;
+    position: absolute;
+    width: $length18;
+    height: $length18;
+    left: 0;
+    top: 50%;
+    margin-top: -$length9;
+    img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+}
+.card-bindline {
+    border-bottom: 1px solid $jstBorderColor;
+}
+.card-bindother {
+    width: 90%;
+    margin: auto;
+    height: $length50;
+    line-height: $length50;
+    font-size: $length14;
+    position: relative;
+}
+.card-write {
+    overflow: hidden;
+    position: absolute;
+    width: $length16;
+    height: $length16;
+    right: 0;
+    top: 50%;
+    margin-top: -$length8;
+    img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+}
+#tc-stage {
+    width: 100%;
+    min-height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: rgba(0,0,0,0.5);
+}
+#tc-content {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    overflow: hidden;
+    background: #fff;
+    p.cardst1 {
+        background: url("../../img/icon/micon_12.png") no-repeat top right;
+        background-size: auto 70%;
+    }
+    p.cardst2 {
+        background: url("../../img/icon/micon_17.png") no-repeat top right;
+        background-size: auto 70%;
+    }
+    p.cardst3 {
+        background: url("../../img/icon/micon_16.png") no-repeat top right;
+        background-size: auto 70%;
+    }
+}
+.h5-fadeInUp {
+    animation: h5-fadeInUp 0.3s ease both;
+    -webkit-animation: h5-fadeInUp 0.3s ease both;
+    -moz-animation: h5-fadeInUp 0.3s ease both;
+}
+@keyframes h5-fadeInUp {
+    0% {
+        transform: translateY(200px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+@-webkit-keyframes h5-fadeInUp {
+    0% {
+        -webkit-transform: translateY(200px);
+    }
+    100% {
+        -webkit-transform: translateY(0);
+    }
+}
+@-moz-keyframes h5-fadeInUp {
+    0% {
+        -moz-transform: translateY(200px);
+    }
+    100% {
+        -moz-transform: translateY(0);
+    }
+}

@@ -1,0 +1,158 @@
+@import '../base/param';
+@import '../sprite/sprite';
+%icon-absolute {
+    position: absolute;
+    content: '';
+    left: $length15 + ($iconHeight / 2);
+    top: 50%;
+    margin-top: -$iconHeight / 2;
+    border-radius: $iconHeight / 2;
+}
+.keyboard-panel {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+//  top:20%;
+    z-index: 999;
+    background: #fff;
+    height: 18.5rem;
+    transform: translateY(100%);
+    .input-box {
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+    }
+}
+.keyboard-view {
+    .title {
+        margin: 0 $length15;
+        line-height: $length40;
+        font-size: $fontSize12;
+        .icon-close {
+            display: none;
+        }
+    }
+    .title-close {
+        margin: 0 0 $length15;
+        font-size: $fontSize14;
+        padding: 0 $length15;
+        text-align: center;
+        border-bottom: 1px solid $borderColor;
+        position: relative;
+    }
+    .icon-close {
+        width: $length40 * 2;
+        height: $length40;
+        display: none;
+        position: absolute;
+        left: 0;
+        z-index: 1;
+        &:before {
+            @extend %icon-absolute;
+            @include closeWindowIcon;
+        }
+    }
+    .input-box.back {
+        transform: translateX(-100%) !important;
+        transition: 0.3s;
+    }
+    .input-box.active {
+        transform: translateX(0px) !important;
+        transition: 0.3s;
+    }
+    .input-box.next {
+        transform: translateX(100%) !important;
+        transition: 0.3s;
+    }
+    .input-box.second-input-box {
+        transform: translateX(100%);
+    }
+    .pwd-box {
+        margin: 0 $length15 $length15;
+        display: flex;
+        background-color: $colorfff;
+        border: 1px solid $borderColor;
+        .pwd-item {
+            width: 100%;
+            height: $length40;
+            border-right: 1px solid $borderColor;
+            &:last-Child {
+                border-right: none;
+            }
+        }
+        .pwd-item.active {
+            position: relative;
+            &:after {
+                content: '';
+                display: block;
+                position: absolute;
+                width: $length10;
+                height: $length10;
+                background-color: $color000;
+                top: 50%;
+                margin-top: -$length10 / 2;
+                left: 50%;
+                margin-left: -$length10 / 2;
+                border-radius: 50%;
+            }
+        }
+    }
+    .forget-pwd {
+        margin: 0 $length15 $length15;
+        text-align: right;
+        color: blue;
+        font-size: $fontSize12;
+    }
+    .keyboard-bottom {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        background-color: $colorfff;
+        transform: translateY(100%);
+        transition: 0.3s;
+        .keyboard-box {
+            display: flex;
+            flex-flow: row wrap;
+            .item {
+                text-align: center;
+                flex: 0 0 33.3333%;
+                padding: $length10 0;
+                border: 1px solid $borderColor;
+                span {
+                    font-size: $fontSize24;
+                    line-height: $fontSize24;
+                    display: inline-block;
+                    width: 100%;
+                }
+                .en {
+                    font-size: $fontSize12;
+                    line-height: $fontSize12;
+                    height: $fontSize12;
+                }
+            }
+            .item.active {
+                background-color: $borderColor;
+            }
+            .up,
+            .back {
+                background-color: $borderColor;
+            }
+            .up {
+                span {
+                    font-size: $fontSize14;
+                }
+            }
+            .back.active {
+                background-color: $colorfff;
+            }
+        }
+    }
+}
+.keyboard-panel.active,
+.keyboard-bottom.active {
+    display: block;
+    transform: translateY(0px);
+    transition: 0.4s;
+}

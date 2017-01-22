@@ -1,0 +1,128 @@
+@charset "utf-8";
+@import '../base/param';
+@import "../layout/header";
+@import "../sprite/sprite";
+
+.mui-modal {
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    overflow: hidden;
+    width: 100%;
+    min-height: 100%;
+    background-color: #fff;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+}
+
+.mui-modal.mui-active {
+    height: 100%;
+    -webkit-transition: -webkit-transform 0.25s;
+    transition: transform 0.25s;
+    -webkit-transition-timing-function: cubic-bezier(.1, .5, .1, 1);
+    transition-timing-function: cubic-bezier(.1, .5, .1, 1);
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+}
+
+.mui-modal.hidden {
+    -webkit-transition: -webkit-transform 0.25s, opacity 1ms 0.25s;
+    transition: transform 0.25s, opacity 1ms 0.25s;
+    -webkit-transition-timing-function: cubic-bezier(.1, .5, .1, 1);
+    transition-timing-function: cubic-bezier(.1, .5, .1, 1);
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+    opacity: 0;
+}
+
+.mui-android .mui-modal .mui-bar {
+    position: static;
+}
+
+.mui-android .mui-modal .mui-bar-nav~ .mui-content {
+    padding-top: 0;
+}
+
+.p-s-p-input-cell {
+    margin: $length20 $length24 0;
+    .mui-input-row {
+        text-align: center;
+        margin-bottom: $length20;
+    }
+    .p-s-p-smscode-input {
+        line-height: 1;
+        width: 100%;
+        height: 2rem;
+        outline: 0;
+        font-size: 0.7rem;
+        border: none;
+        background: none;
+        border-radius: 0;
+        padding: 0 2rem 0 0;
+        margin-bottom: 0;
+        -webkit-appearance: none;
+    }
+    .p-s-p-input-title {
+        text-align: left;
+        color: $color666;
+    }
+    .p-s-p-input-tips {
+        display: block;
+        border-bottom: 1px solid $borderColor;
+        text-align: left;
+        font-size: $fontSize12;
+        width: 100%;
+    }
+    .error {
+        padding-bottom: $length8;
+        color: $mainColor;
+    }
+}
+
+//获取验证码
+.p-s-p-check-code {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    .disabled {
+        background-color: $color000;
+        opacity: 0.2;
+        color: $colorfff;
+    }
+
+}
+.p-s-p-get-code-btn {
+    text-align: center;
+    background-color: $mainColor;
+    color: $colorfff;
+    padding: 0 $length10;
+    line-height: $length30;
+    height: $length30;
+    border-radius: $length10;
+}
+.p-s-p-smscode-input-container {
+    flex: 1;
+    height: $length40;
+    position: relative;
+    line-height: $length40;
+}
+
+//确认铵钮
+.p-s-p-btn-cell {
+    margin: $length55 auto;
+    width: 90%;
+    .p-s-p-confirm-btn {
+        background-color: $mainColor;
+        color: $colorfff;
+        line-height: $length40;
+        text-align: center;
+        border-radius: $length20;
+        font-size: $fontSize16;
+    }
+    .p-s-p-confirm-btn.disabled {
+        opacity: 0.5;
+    }
+}

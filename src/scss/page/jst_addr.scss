@@ -1,0 +1,57 @@
+@charset "utf-8";
+@import '../base/param';
+@import "../layout/header";
+*{
+    font-family:"Microsoft YaHei", "Helvetica Neue", "Helvetica", "sans-serif", "arial", "宋体";
+    color:$color333;
+}
+html,body{
+    height:100%;
+}
+.ds-none{
+    display: none!important;
+}
+.mui-content{
+    background:#e3e3e3;
+    height:100%;
+}
+
+.addr-cell{
+      
+    .addr{
+        background:#fff;
+        padding:$length20;
+        margin-bottom:$length10;
+        .addr-title{
+            font-size:$fontSize16;
+            padding:$length5 0;
+        }
+        .addr-addr{
+            padding:$length5 0;
+            img{
+               width:$length15;
+               height: $length15;
+               vertical-align:middle;
+               margin-right:$length5;
+            }
+            a{
+               font-size:$fontSize12; 
+               display:inline-block;
+               vertical-align:middle;
+            }
+        }
+        .addr-tel{
+            padding:$length5 0;
+            img{
+               width:$length15;
+               height: $length15;
+               margin-right:$length5;
+            }
+            a{
+                font-size:$fontSize12; 
+                display:inline-block;
+                vertical-align:middle;
+            }
+        }
+    }
+}

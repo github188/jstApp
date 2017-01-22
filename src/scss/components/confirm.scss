@@ -1,0 +1,231 @@
+/*confirm*/
+@import '../base/param';
+@import '../sprite/sprite';
+.mui-popup-title + .mui-popup-text {
+    line-height: 1.4;
+}
+.mui-popup-backdrop{
+    z-index: 1000;
+}
+.mui-popup {
+    position: fixed;
+    z-index: 1001;
+    top: 50%;
+    left: 50%;
+    display: none;
+    overflow: hidden;
+    width: 11.52rem;
+    -webkit-transition-property: -webkit-transform,opacity;
+    transition-property: transform,opacity;
+    -webkit-transform: translate3d(-50%, -50%, 0) scale(1.185);
+    transform: translate3d(-50%, -50%, 0) scale(1.185);
+    text-align: center;
+    opacity: 0;
+    color: #000;
+    border-radius: 0.55467rem;
+    background: #fff;
+    &.mui-popup-in {
+        display: block;
+        -webkit-transition-duration: 400ms;
+        transition-duration: 400ms;
+        -webkit-transform: translate3d(-50%, -50%, 0) scale(1);
+        transform: translate3d(-50%, -50%, 0) scale(1);
+        opacity: 1;
+    }
+    &.mui-popup-out {
+        -webkit-transition-duration: 400ms;
+        transition-duration: 400ms;
+        -webkit-transform: translate3d(-50%, -50%, 0) scale(1);
+        transform: translate3d(-50%, -50%, 0) scale(1);
+        opacity: 0;
+    }
+}
+.mui-popup-inner {
+    position: relative;
+    padding: 0.64rem;
+    border-radius: 0.55467rem 0.55467rem 0 0;
+    background: rgba(255, 255, 255, 0.95);
+    &:after {
+        position: absolute;
+        z-index: 15;
+        top: auto;
+        right: auto;
+        bottom: 0;
+        left: 0;
+        display: block;
+        width: 100%;
+        height: 1px;
+        content: '';
+        -webkit-transform: scaleY(0.5);
+        transform: scaleY(0.5);
+        -webkit-transform-origin: 50% 100%;
+        transform-origin: 50% 100%;
+        background-color: rgba(0, 0, 0, 0.2);
+    }
+}
+.mui-popup-title {
+    font-size: 0.72533rem; //  font-weight: 500;
+    text-align: center;
+    + .mui-popup-text {
+        font-family: inherit;
+        font-size: 0.59733rem;
+        margin: 0.64rem 0 0;
+        white-space: pre-wrap;
+        word-wrap: break-word;
+        .popup-text-color {
+            color: red;
+        }
+    }
+}
+.mui-popup-buttons {
+    position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    height: 1.87733rem;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+.mui-popup-button {
+    font-size: 0.72533rem;
+    line-height: 1.87733rem;
+    position: relative;
+    display: block;
+    overflow: hidden;
+    box-sizing: border-box;
+    width: 100%;
+    height: 1.87733rem;
+    padding: 0 0.21333rem;
+    cursor: pointer;
+    text-align: center;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: #666;
+    background: rgba(255, 255, 255, 0.95);
+    -webkit-box-flex: 1;
+    &:after {
+        position: absolute;
+        z-index: 15;
+        top: 0;
+        right: 0;
+        bottom: auto;
+        left: auto;
+        display: block;
+        width: 1px;
+        height: 100%;
+        content: '';
+        -webkit-transform: scaleX(0.5);
+        transform: scaleX(0.5);
+        -webkit-transform-origin: 100% 50%;
+        transform-origin: 100% 50%;
+        background-color: rgba(0, 0, 0, 0.2);
+    }
+    &:first-child {
+        border-radius: 0 0 0 0.55467rem;
+        &:last-child {
+            border-radius: 0 0 0.55467rem 0.55467rem;
+        }
+    }
+    &:last-child {
+        border-radius: 0 0 0.55467rem 0;
+        &:after {
+            display: none;
+        }
+    }
+    &.mui-popup-button-bold {
+        //      font-weight: 600;
+        color: $mainColor;
+    }
+}
+.mui-popup-input input {
+    font-size: 0.59733rem;
+    width: 100%;
+    height: 1.10933rem;
+    margin: 0.64rem 0 0;
+    padding: 0 0.21333rem;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 0;
+    background: #fff;
+}
+.mui-plus.mui-android {
+    .mui-popup-backdrop {
+        -webkit-transition-duration: 1ms;
+        transition-duration: 1ms;
+    }
+    .mui-popup {
+        -webkit-transition-duration: 1ms;
+        transition-duration: 1ms;
+        -webkit-transform: translate3d(-50%, -50%, 0) scale(1);
+        transform: translate3d(-50%, -50%, 0) scale(1);
+    }
+}
+.mui-popup-backdrop.mui-active {
+    opacity: 1;
+}
+%icon-absolute {
+    position: absolute;
+    content: '';
+    top: 50%;
+    margin-top: -$iconHeight / 2;
+    border-radius: $iconHeight / 2;
+}
+//短信弹出框样式
+.popup-sms-close {
+    position: absolute;
+    right: $length5;
+    top: $length5;
+    width: $length40;
+    height: $length40;
+    &:after {
+        @extend %icon-absolute;
+        @include closeWindowIcon;
+    }
+}
+.popup-sms-confirm {
+    .popup-sms-title {
+        margin: $length40 0 $length15;
+        font-size: $fontSize12;
+        color: $color999;
+        text-align: left;
+    }
+    //获取验证码
+    .popup-check-code {
+        display: flex;
+        .popup-sms-input {
+            height: $length35;
+            font-size: 14px;
+            padding: 0 0 0 $length15;
+        }
+        .popup-get-code-btn {
+            text-align: center;
+            color: $colorfff;
+            line-height: $length35 !important;
+            background-color: $mainColor;
+            border-radius: $length5;
+            margin-left: $length15;
+            width: auto;
+            font-size: $fontSize14;
+            padding: 0 $length5;
+        }
+        .popup-sms-input-contanier {
+            height: $length35;
+            border-right: 1px solid #eee;
+            position: relative;
+            line-height: $length35;
+            flex: 1;
+        }
+        .disabled {
+            background-color: #999;
+        }
+    }
+    .popup-sms-confim-btn {
+        background-color: $mainColor;
+        color: $colorfff;
+        line-height: $length35;
+        text-align: center;
+        border-radius: $length5;
+        width: 70%;
+        margin: $length35 auto;
+    }
+}

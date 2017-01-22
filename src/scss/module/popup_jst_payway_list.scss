@@ -1,0 +1,58 @@
+@charset "utf-8";
+@import '../base/param';
+@import "../sprite/sprite";
+////////////////支付卡列表
+.popup-jst-payway-list {
+    padding: 0 $length16;
+    .p-j-p-l-item {
+        position: relative;
+        display: flex;
+        align-items: center;
+        height: $length55;
+        border-bottom: 1px solid $borderColor;
+        .p-j-p-l-card-img {
+            display: inline-block;
+            width: $length32;
+            height: $length32;
+            margin-right: $length8;
+        }
+        .p-j-p-l-card-info {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            .p-j-p-l-card-name {
+                font-size: $fontSize14;
+            }
+            .p-j-p-l-card-tip {
+                display: none;
+                margin-top: $length8;
+                font-size: $fontSize11;
+                color: $tipColor878787;
+
+            }
+        }
+        .p-j-p-l-card-info.has-limit .p-j-p-l-card-tip {
+            display: block;
+        }
+    }
+    .p-j-p-l-item.selected {
+        &:after {
+            content: '';
+            position: absolute;
+            width: $iconPayWaySelectedWidth;
+            height: $iconPayWaySelectedHeight;
+            display: block;
+            background: url("../../img/icon/icon_payway_selected.png") no-repeat;
+            background-size: 100% 100%;
+            top: 50%;
+            right: 0;
+            margin-top: -$iconPayWaySelectedHeight / 2;
+        }
+    }
+    .p-j-p-l-item.disabled {
+        color: $tipColor878787;
+        .p-j-p-l-card-img {
+            opacity: 0.5;
+        }
+    }
+}

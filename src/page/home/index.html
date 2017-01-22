@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>首页</title>
+
+		<meta name="author" content="devloper@jieshunpay.com">
+
+		<!-- 为移动设备添加 viewport -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<!-- 关闭电话号码识别： -->
+		<meta content="telephone=no" name="format-detection">
+		<!-- 邮箱识别： -->
+		<meta content="email=no" name="format-detection">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../../css_output/base/base.css" />
+		<link rel="stylesheet" href="../../css_output/page/index.css" inline/>
+	</head>
+
+	<body>
+
+		<article class="mui-content">
+			<!--下拉刷新容器-->
+			<div id="pullrefresh" class="mui-scroll-wrapper">
+				<div class="mui-scroll">
+					<!--<section class="view-top"></section>-->
+					<section>
+						<div id="slider" class="mui-slider">
+							<div class="mui-slider-group mui-slider-loop">
+								<!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+								<div class="mui-slider-item mui-slider-item-duplicate" href="">
+									<img src="../../img/other/bj_banner2.png">
+								</div>
+
+								<div class="mui-slider-item" href="">
+									<img src="../../img/other/bj_banner.png">
+								</div>
+
+								<div class="mui-slider-item" href="">
+									<img src="../../img/other/bj_banner2.png">
+								</div>
+
+								<!-- 额外增加的一个节点(循环轮播：最后一个节点是第零张轮播) -->
+								<div class="mui-slider-item mui-slider-item-duplicate" href="">
+									<img src="../../img/other/bj_banner.png">
+								</div>
+							</div>
+							<div class="mui-slider-indicator">
+								<div class="mui-indicator mui-active"></div>
+								<div class="mui-indicator"></div>
+							</div>
+						</div>
+					</section>
+					
+					<section>
+						<div class="img-cell-lg">
+							<a class="page-href" data-href="/page/account/test_shop.html">
+								<img src="../../img/other/bj_guangg.png" alt="测试商户" />
+							</a>
+						</div>
+					</section>
+					
+					<section class="clearfloat img-cells">
+						<div class="img-cell-sm float_l">
+							<a class="page-href" data-href="">
+								<img src="../../img/other/bj_xins.png" alt="" />
+							</a>
+						</div>
+						<div class="img-cell-sm float_r">
+							<a class="page-href" data-href="">
+								<img src="../../img/other/bj_yueyue.png" alt="" />
+							</a>
+						</div>
+					</section>
+
+				</div>
+			</div>
+		</article>
+
+		<!--MUI-->
+		<script src="../../js/vendors/mui.3.2.0.js"></script>
+		<script src="../../js/vendors/mui.slider.pullrefresh.js"></script>
+
+		<!-- 自定义js -->
+		<script src="../../js/common.js"></script>
+		<script type="text/javascript" src="../../js/index.js"></script>
+	</body>
+
+</html>

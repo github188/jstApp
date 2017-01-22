@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>登录</title>
+
+		<meta name="author" content="devloper@jieshunpay.com">
+
+		<!-- 为移动设备添加 viewport -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<!-- 关闭电话号码识别： -->
+		<meta content="telephone=no" name="format-detection">
+		<!-- 邮箱识别： -->
+		<meta content="email=no" name="format-detection">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../../css_output/base/base.css" />
+		<link rel="stylesheet" href="../../css_output/page/login.css" inline/>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav header">
+			<a class="back mui-action-back mui-icon mui-icon-back"></a>
+			<p class="mui-title">登录</p>
+		</header>
+		<div class="mui-content">
+			<!--内容区 开始-->
+
+			<section class="input-cell">
+				<div class="mui-input-row input-mobile">
+					<input type="tel" class="mui-input-clear" placeholder="请输入手机号" id="mobile" value="">
+					<p class="input-tips" id="mobileErrorTip"></p>
+				</div>
+
+				<div class="mui-input-row mui-password">
+					<input type="password" class="mui-input-password" placeholder="请输入密码" id="pwd" value="">
+					<p class="input-tips" id="pwdErrorTip"></p>
+				</div>
+			</section>
+
+			<section class="forget-pwd-cell">
+				<a class="page-href forget-pwd" data-href="/page/account/getback_password.html">忘记密码</a>
+			</section>
+
+			<section class="btn-cell">
+				<div class="btn" id="loginBtn">登录</div>
+			</section>
+
+			<section class="register-cell">
+				<a class="page-href register" data-href="/page/account/register.html">立即注册</a>
+			</section>
+
+			<!--内容区 结束-->
+
+		</div>
+
+		<!--MUI-->
+		<script src="../../js/vendors/mui.3.2.0.js"></script>
+		<!-- 自定义js -->
+		<script src="../../js/common.js"></script>
+		<script type="text/javascript" src="../../js/login.js"></script>
+	</body>
+
+</html>

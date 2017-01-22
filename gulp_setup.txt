@@ -1,0 +1,6 @@
+echo begin install
+npm install gulp --save-dev
+npm install gulp-util gulp-clean gulp-sass gulp-clean-css gulp-autoprefixer gulp-inline-source gulp-jshint gulp-uglify gulp-rev gulp-notify gulp-rev-collector webpack gulp-htmlmin --save-dev
+npm install --save-dev jshint gulp-jshint
+npm install --save-dev fs
+npm install --save-dev gulp-ssh

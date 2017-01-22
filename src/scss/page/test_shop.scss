@@ -1,0 +1,75 @@
+@charset "utf-8";
+@import "../base/base";
+@import '../base/param';
+@import "../layout/header";
+@import "../layout/input";
+@import "../components/confirm";
+@import "../layout/page_view";
+
+html,body{
+    height:100%;
+}
+.clear:after{
+    content: "";
+    height: 0;
+    display:block;
+    overflow: hidden;
+    clear: both;
+}
+.mui-content{
+    background:$colorfff;
+    min-height: 100%;
+    width:100%;
+}
+
+.img-cell-lg{
+    width:100%;
+    margin:0 auto;
+    height:$length140 + $length4;
+    a{     
+        img{
+            width:100%;
+            height:100%;
+        }
+    }
+}
+
+.num-cell{
+    padding:$length15;
+    border-bottom: 1px solid $borderColor;
+    .num-cell-sm{
+        width:50%;
+        .num-box{
+            padding-left:$length15;
+            font-size: $fontSize16;
+            color:$jstMainColor;
+            span{
+                display: inline-block;
+                vertical-align: middle;
+            }
+            input{
+                width:60%;
+                height:$length30;
+                color:$jstMainColor;
+                font-size: $fontSize16;
+                text-align: left;
+                outline: none;
+                margin-left: $length5;
+            }
+        }
+        .btn{
+            width: 68%;
+            margin:0 auto;
+            height:$length30;
+            font-size:$length16;
+            text-align: center;
+            line-height: $length30;
+            background: $jstMainColor;
+            color: $colorfff;
+            border-radius:$length5 ;
+        }
+    }
+}
+
+
+

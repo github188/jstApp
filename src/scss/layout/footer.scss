@@ -1,0 +1,71 @@
+/* 底部菜单导航 */
+@import '../base/param';
+
+.mui-content {
+    padding-bottom: $footerHeight;
+}
+
+.footer-bottom {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    width: 100%;
+    line-height: $footerHeight;
+    background: $tipBgColorf4f4f4;
+    .footer-item {
+        flex: 0 0 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .footer-icon {
+            width: $length24;
+            height: $length24;
+            margin-right: $length8;
+
+        }
+
+        .footer-text {
+            font-size: $fontSize11;
+            color: $tipColor878787;
+        }
+
+    }
+
+    .nav-0 {
+        .footer-icon {
+            background: url("../../img/icon/icon_footer_home.png") no-repeat;
+            background-size: 100% 100%;
+        }
+
+    }
+    .nav-1 {
+        .footer-icon {
+            background: url("../../img/icon/icon_footer_my.png") no-repeat;
+            background-size: 100% 100%;
+        }
+    }
+
+    //激活状态
+    .nav-0.active {
+        .footer-icon {
+            background: url("../../img/icon/icon_footer_home_on.png") no-repeat;
+            background-size: 100% 100%;
+        }
+
+    }
+    .nav-1.active {
+        .footer-icon {
+            background: url("../../img/icon/icon_footer_my_on.png") no-repeat;
+            background-size: 100% 100%;
+        }
+
+    }
+
+    //选中状态
+    .footer-item.active {
+        .footer-text {
+            color: $mainColor;
+        }
+    }
+}

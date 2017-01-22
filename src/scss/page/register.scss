@@ -1,0 +1,134 @@
+@import '../base/param';
+@import "../layout/header";
+@import "../sprite/sprite";
+@import "../layout/input";
+@import "../layout/page_view";
+%padding15-lineHeight40 {
+    padding: 0 $length15;
+    line-height: $length40;
+}
+.header {
+    border-bottom: none;
+}
+.mui-content {
+    background: url("../../img/bg/login_bg.png") no-repeat;
+    background-size: 100% 100%;
+    min-height: 100%;
+    position: absolute;
+    width: 100%;
+}
+
+.mui-navbar {
+    background: none;
+}
+
+.input-cell {
+    margin: $length60 $length24 0;
+    .mui-input-row {
+        text-align: center;
+        margin-bottom: $length20;
+    }
+    input {
+        border: none;
+        background: none;
+        font-size: $fontSize17;
+        border-radius: 0;
+        padding: 0 2rem 0 0;
+        margin-bottom: 0;
+    }
+    input::-webkit-input-placeholder {
+        color: $color000;
+        opacity: 0.2;
+    }
+    input:-moz-placeholder {
+        color: $color000;
+        opacity: 0.2;
+    }
+    input::-moz-placeholder {
+        color: $color000;
+        opacity: 0.2;
+    }
+    input:-ms-input-placeholder {
+        color: $color000;
+        opacity: 0.2;
+    }
+    .input-tips {
+        display: block;
+        border-bottom: 1px solid $tipColor878787;
+        text-align: left;
+        font-size: $fontSize12;
+        width: 100%;
+    }
+    .error {
+        padding-bottom: $length8;
+        color: $mainColor;
+    }
+    .mui-icon.mui-icon-eye {
+        display: none;
+    }
+}
+//获取验证码
+.check-code {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    .get-code-btn {
+        text-align: center;
+        background-color: $mainColor;
+        color: $colorfff;
+        padding: 0 $length10;
+        line-height: $length30;
+        height: $length30;
+        border-radius: $length10;
+    }
+    .disabled {
+        background-color: $color000;
+        opacity: 0.2;
+        color: $colorfff;
+    }
+    .smscode--input-container {
+        flex: 1;
+        height: $length40;
+        position: relative;
+        line-height: $length40;
+    }
+}
+.mui-password {
+    margin-bottom: 0;
+}
+.agreement-cell {
+    position: absolute;
+    bottom: $length30;
+    width: 100%;
+    text-align: center;
+    @extend %padding15-lineHeight40;
+    .agreement {
+        color: $mainColor;
+    }
+}
+//确认铵钮
+.btn-cell {
+    margin: $length55 auto;
+    width: 90%;
+    .btn {
+        background-color: $mainColor;
+        color: $colorfff;
+        line-height: $length40;
+        text-align: center;
+        border-radius: $length20;
+        font-size: $fontSize16;
+    }
+    .btn.disabled {
+        opacity: 0.5;
+    }
+}
+.disabled {
+    opacity: 0.5;
+}
+
+//密码规则提示
+.pwd-tip {
+    color: $color666;
+    line-height: $length20;
+}

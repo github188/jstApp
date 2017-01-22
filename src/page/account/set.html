@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>设置</title>
+
+		<meta name="author" content="devloper@jieshunpay.com">
+
+		<!-- 为移动设备添加 viewport -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<!-- 关闭电话号码识别： -->
+		<meta content="telephone=no" name="format-detection">
+		<!-- 邮箱识别： -->
+		<meta content="email=no" name="format-detection">
+		<link rel="stylesheet" href="../../css_output/base/base.css" />
+		<link rel="stylesheet" href="../../css_output/page/set.css" inline/>
+	</head>
+
+	<body class="mui-fullscreen">
+
+		<!--页面主结构开始-->
+		<div id="app" class="mui-views">
+			<div class="mui-view">
+				<div class="mui-navbar">
+				</div>
+				<div class="mui-pages">
+				</div>
+			</div>
+		</div>
+		<!--页面主结构结束-->
+
+		<!--单页面开始-->
+		<!--支付信息-->
+		<div id="setMainView" class="mui-page">
+			<!--页面标题栏开始-->
+
+			<header class="mui-navbar-inner mui-bar mui-bar-nav header">
+				<a class="back mui-icon mui-icon-back mui-left mui-action-back"></a>
+				<p class="mui-center mui-title">设置</p>
+			</header>
+
+			<!--页面标题栏结束-->
+			<!--页面主内容区开始-->
+			<div class="mui-page-content">
+
+				<ul class="table-cell-view">
+
+					<li class="table-cell mui-hidden" id="resetpayPwdCell">
+						<a href="#resetPayPwdView">
+							<span class="cell-left">重置支付密码</span>
+							<span class="cell-right icon-right mui-ellipsis">&nbsp;</span>
+						</a>
+					</li>
+
+					<li class="table-cell" id="resetLoginPwd">
+						<a href="#resetLoginPwdView">
+							<span class="cell-left">重置登录密码</span>
+							<span class="cell-right icon-right mui-ellipsis">&nbsp;</span>
+						</a>
+					</li>
+
+					<li class="table-cell">
+						<a href="#aboutUsView">
+							<span class="cell-left">关于我们</span>
+							<span class="cell-right icon-right mui-ellipsis">&nbsp;</span>
+						</a>
+					</li>
+
+				</ul>
+
+				<section class="table-cell-view logout">退出登录</section>
+			</div>
+			<!--页面主内容区结束-->
+		</div>
+
+		<!--重置登录密码-->
+		<div id="resetLoginPwdView" class="mui-page">
+			<!--页面标题栏开始-->
+
+			<header class="mui-navbar-inner mui-bar mui-bar-nav header">
+				<a class="back mui-icon mui-icon-back mui-left mui-action-back"></a>
+				<p class="mui-center mui-title">重置登录密码</p>
+			</header>
+
+			<!--页面标题栏结束-->
+			<!--页面主内容区开始-->
+			<div class="mui-page-content">
+
+				<ul class="table-cell-view">
+
+					<li class="table-cell page-href" data-href="/page/account/change_password.html">
+						<span class="cell-left">记得原密码</span>
+						<span class="cell-right icon-right mui-ellipsis">&nbsp;</span>
+					</li>
+
+					<li class="table-cell page-href" data-href="/page/account/getback_password.html">
+						<span class="cell-left">忘记原密码</span>
+						<span class="cell-right icon-right mui-ellipsis">&nbsp;</span>
+					</li>
+
+				</ul>
+
+			</div>
+			<!--页面主内容区结束-->
+		</div>
+
+		<!--重置登录密码-->
+		<div id="resetPayPwdView" class="mui-page">
+			<!--页面标题栏开始-->
+
+			<header class="mui-navbar-inner mui-bar mui-bar-nav header">
+				<a class="back mui-icon mui-icon-back mui-left mui-action-back"></a>
+				<p class="mui-center mui-title">重置支付密码</p>
+			</header>
+
+			<!--页面标题栏结束-->
+			<!--页面主内容区开始-->
+			<div class="mui-page-content">
+
+				<ul class="table-cell-view">
+
+					<li class="table-cell" id="updatePayPwd">
+						<span class="cell-left">记得原密码</span>
+						<span class="cell-right icon-right mui-ellipsis">&nbsp;</span>
+					</li>
+
+					<li class="table-cell" id="resetPayPwd">
+						<span class="cell-left">忘记原密码</span>
+						<span class="cell-right icon-right mui-ellipsis">&nbsp;</span>
+					</li>
+
+				</ul>
+
+			</div>
+			<!--页面主内容区结束-->
+		</div>
+
+		<!--关于我们-->
+		<div id="aboutUsView" class="mui-page">
+			<!--页面标题栏开始-->
+			<header class="mui-navbar-inner mui-bar mui-bar-nav header">
+				<a class="back mui-icon mui-icon-back mui-left mui-action-back"></a>
+				<p class="mui-center mui-title">关于我们</p>
+			</header>
+			<!--页面标题栏结束-->
+			<!--页面主内容区开始-->
+			<div class="mui-page-content about-bg-white">
+				<div class="about-barbox">
+					<img src="../../img/banner/bj_guany.png" />
+				</div>
+				<div class="about-ti">
+					<div class="about-tibox">
+						<p><span>捷顺金科使命</span>：助力合作伙伴构建金融能力</p>
+						<p><span>捷顺金科愿景</span>：科技让金融更普惠</p>
+					</div>
+				</div>
+				<div class="about-con">
+					<div class="about-conbox">
+						<p>捷顺金科技术服务有限公司是深圳市捷顺科技实业股份有限公司（股票代码：002609.sz）控股的、从事金融科技系统研发、金融产品发行与管理的金融科技企业。</p>
+						<p>&nbsp;</p>
+						<p>捷顺金科将以捷顺停车场、门禁为入口，构建智慧商业、智慧社区与智慧园区的应用场景；利用互联网支付牌照，搭建金融电子账户，为场景内的C端会员与小B客户提供购物消费、投资理财、消费信贷与流水小贷为一体的金融服务，形成车流、信息流与资金流的闭环，与合作伙伴共建场景金融，降低金融风险，提高金融效率。</p>
+					    <p>&nbsp;</p>
+					    <p>联系电话：400-700-5305</p>
+					</div>
+				</div>
+			</div>
+			<!--页面主内容区结束-->
+		</div>
+
+		<!--MUI-->
+		<script src="../../js/vendors/mui.3.2.0.js"></script>
+		<script src="../../js/vendors/mui.view.js "></script>
+		<!-- 自定义js -->
+		<script src="../../js/common.js"></script>
+		<script type="text/javascript" src="../../js/set.js"></script>
+	</body>
+
+</html>

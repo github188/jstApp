@@ -1,0 +1,159 @@
+@import '../base/param';
+@import "../sprite/sprite";
+@import "../layout/footer";
+%borderBottom {
+    border-bottom: 1px solid $borderColor;
+}
+.mui-content,
+body {
+    background-color: $contentBgcolor;
+}
+
+.mui-content {
+    padding-top: 0 !important;
+}
+
+//显示余额
+.balance-cell {
+    color: $colorfff;
+    background-color: $mainColor;
+    text-align: center;
+    height: $length210;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .balance-text {
+        font-size: $fontSize11;
+    }
+
+    .balance {
+        font-size: $fontSize40;
+        margin: $length14 0;
+    }
+
+    .balance-recharge {
+        height: $length28;
+        line-height: $length28;
+        font-size: $fontSize14;
+        color: $mainColor;
+        background: $colorfff;
+        padding: 0 $length20;
+        border-radius: $length20;
+    }
+    .balance-recharge.unlogin {
+        background: $colorf29d79;
+    }
+
+    .set {
+        position: absolute;
+        right: $length16;
+        top: $length12;
+        background: url("../../img/icon/icon_setting.png") no-repeat;
+        background-size: 50% 50%;
+        width: $length20 * 2;
+        height: $length20 * 2;
+        background-position: top right;
+    }
+}
+
+.balance-border {
+    height: 12px;
+    width: 100%;
+    background: url("../../img/border/border_account_balance.png") no-repeat;
+    background-size: 100% auto;
+}
+
+.table-cell {
+    display: flex;
+    align-items: center;
+    display: flex;
+    background-color: $colorfff;
+    height: $length40 * 2;
+    margin: $length8 $length16;
+    border-radius: $length8;
+    span {
+        display: inline-block;
+    }
+    .cell-left {
+        flex: 0 0 60%;
+    }
+    .cell-right {
+        flex: 0 0 40%;
+        text-align: right;
+        color: #999;
+        vertical-align: top;
+    }
+}
+.separate {
+    margin-bottom: $length15;
+}
+
+.table-cell-view {
+
+    margin: -$length35 $length16 0;
+
+    .cell-item {
+        display: flex;
+        align-items: center;
+        height: $length40 * 2;
+        border-radius: $length8;
+        background-color: $colorfff;
+        margin-bottom: $length10;
+        .cell-img {
+            display: inline-block;
+            width: $length32;
+            height: $length32;
+            margin-right: $length8;
+            margin-left: $length16;
+        }
+        .cell-info {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            font-size: $fontSize14;
+            color: $color333;
+            .cell-name {
+                font-size: $fontSize11;
+                color: $tipColor878787;
+            }
+            .cell-value {
+                font-size: $fontSize14;
+                margin-top: $length8;
+                color: $color333;
+            }
+        }
+        .unlogin {
+            color: $placeholderColor !important;
+        }
+        &:last-child {
+            border-bottom: none;
+        }
+        &:after {
+            right: $length16;
+        }
+    }
+
+}
+
+//确认
+.btn-cell {
+    margin: $length14 auto;
+    width: 90%;
+    display: none;
+    .btn {
+        background-color: $mainColor;
+        color: $colorfff;
+        line-height: $length40;
+        text-align: center;
+        border-radius: $length20;
+        font-size: $fontSize16;
+    }
+    .btn.disabled {
+        opacity: 0.5;
+    }
+}
+.btn-cell.unlogin {
+    display: block;
+}

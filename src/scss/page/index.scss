@@ -1,0 +1,47 @@
+@charset "utf-8";
+@import "../base/base";
+@import '../base/param';
+@import "../layout/footer";
+@import "../layout/slider";
+/*轮播图片*/
+.mui-slider img {
+    height: 7.46667rem;
+}
+.mui-scroll {
+    position: initial;
+}
+.mui-scroll-wrapper {
+    margin-bottom: 51px;
+}
+.mui-bar-nav ~ .mui-content .mui-pull-top-pocket {
+    top: 0;
+}
+
+.img-cells{
+    padding:0 $length8;
+    margin-top:$length10;
+}
+.img-cell-lg{
+    width:5*$length60 + $length4;
+    margin:0 auto;
+    height:$length140 + $length4;
+    margin-top:$length10;
+    a{
+        
+        img{
+            width:100%;
+            height:100%;
+        }
+    }
+}
+
+.img-cell-sm{
+    width:$length140 + $length8;
+    height:$length100 + $length18;
+    a{
+        img{
+            width:100%;
+            height:100%;
+        }
+    }
+}

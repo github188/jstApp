@@ -1,0 +1,255 @@
+@charset "utf-8";
+@import '../base/param';
+@import "../layout/header";
+*{
+    font-family:"Microsoft YaHei", "Helvetica Neue", "Helvetica", "sans-serif", "arial", "宋体";
+    color:$color333;
+}
+html,body{
+    height:100%;
+}
+.ds-none{
+    display: none!important;
+}
+.mui-content{
+    
+    background:$colorfff;
+    height:100%;
+}
+
+.head-cell{ 
+    padding:0 $length15;  
+    border-bottom:1px solid $jstBorderColor;
+    .oper-addr{
+        width:30%;
+        float:left;
+        padding:$length15 0;
+        .addr{
+            text-align:left;
+            span{
+              font-size:$fontSize14;  
+              display:inline-block;
+              vertical-align:middle;
+            }
+            i{
+               display:inline-block;
+               vertical-align:middle;
+               width:$length15;
+               height:$length15;
+               background-image:url(../../img/icon/jt1.png);
+               background-repeat:no-repeat;
+               background-size:100% 100%;
+               background-position:center;
+            }
+            .i-on{
+                background-image:url(../../img/icon/jt4.png);
+            }
+        }
+    }
+    .oper-class{
+        width:40%;
+        float:left;
+        padding:$length15 0;
+        .class{
+            text-align:center;
+            span{
+              font-size:$fontSize14; 
+              display:inline-block;
+              vertical-align:middle; 
+            }
+            i{
+               display:inline-block;
+               vertical-align:middle;
+               width:$length15;
+               height:$length15;
+               background-image:url(../../img/icon/jt1.png);
+               background-repeat:no-repeat;
+               background-size:100% 100%;
+               background-position:center;
+            }
+            .i-on{
+                background-image:url(../../img/icon/jt4.png);
+            }
+        }
+    }
+    .oper-search{
+        width:30%;
+        float:right;
+        padding:$length15 0;
+        .search{
+            text-align:right;
+            span{
+              font-size:$fontSize14;  
+              display:inline-block;
+              vertical-align:middle;
+              
+            }
+            i{
+               display:inline-block;
+               vertical-align:middle;
+               width:$length15;
+               height:$length15;
+               background-image:url(../../img/icon/ss.png);
+               background-repeat:no-repeat;
+               background-size:100% 100%;
+               background-position:center;
+            }
+        }
+    }
+}
+
+/**/
+.shop-cell{
+    
+    .shop{
+        padding:$length10 $length15;
+        border-bottom:1px solid $jstBorderColor;
+        .shop-img{
+            float:left;
+            width:30%;
+            img{
+                width:2*$length40;
+                height:2*$length40;
+                border-radius:$length10;
+            }
+        }
+        .shop-mes{
+            float:right;
+            width:69%;
+            .shop-name{
+                padding:$length10 0;
+                h2{
+                  font-size:$fontSize16;
+                  font-weight:500;  
+                }
+            }
+            .shop-addr{
+                padding-bottom:$length5;
+                img{
+                   width:$length15;
+                   height:$length15;
+                   margin-right:$length5;                   
+                }
+                a{
+                    font-size:$fontSize12;
+                    color:$color666;
+                    display:inline-block;
+                    vertical-align:middle;
+                    width:3*$length60;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+            }
+            .shop-tel{
+                img{
+                   width:$length15;
+                   height:$length15;
+                   margin-right:$length5;               
+                }
+                a{
+                   font-size:$fontSize12;
+                   color:$color666;
+                   display:inline-block;
+                   vertical-align:middle;
+                   width:3*$length60;
+                   white-space: nowrap;
+                   overflow: hidden;
+                   text-overflow: ellipsis;
+                }
+            }
+        }
+    }  
+}
+/*地址列表*/
+.addr-list{
+    margin-top:$length60 + $length26;
+    background:rgba(000,000,000,0);
+    position:fixed;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    .list-cell{
+        
+        background:$colorfff;
+        width:$length60;
+        border-right:1px solid #e3e3e3;
+        border-bottom:1px solid #e3e3e3;
+        padding:0 $length15;
+        li{
+           padding:$length10 0;
+           border-bottom:1px solid $jstBorderColor; 
+           text-align:center;
+           &:last-child{
+              border-bottom:0;  
+           }
+        }
+    }
+}
+/*类别列表*/
+.class-list{
+    margin-top:$length60 + $length26;
+    background:rgba(000,000,000,0);
+    position:fixed;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    .class-cell{      
+        background:$colorfff;
+        width:3*$length60;
+        margin:0 auto;
+        
+        padding:0 $length15;
+        border:1px solid #e3e3e3;
+        border-top:0;
+        li{
+           padding:$length10 0;
+           border-bottom:1px solid $jstBorderColor; 
+           text-align:center;
+           &:last-child{
+              border-bottom:0;  
+           }
+        }
+    }
+} 
+/**/
+.search-list{
+    background:rgba(000,000,000,0);
+    position:fixed;
+    width:100%;
+    height:100%;
+    top:$length40;
+    left:0;
+    .search-cell{
+        padding:$length10 $length15 $length5;
+        background:$colorfff;
+        .input-cell{
+            float:left;
+            width:88%;
+            input{
+                width:100%;
+                border:0;
+                border-radius:$length5;
+                background:#e3e3e3;
+                padding:$length5;
+                font-size:$fontSize14;
+            }
+        }
+        .btn-cell{
+            float:right;
+            width:11%;
+            .btn{
+              width:100%;
+              text-align:right;  
+              color:$jstMainColor;
+              line-height:$length25;
+            }
+        }
+    }
+    .none{
+        height:100%;
+        width:100%;
+    }
+}   

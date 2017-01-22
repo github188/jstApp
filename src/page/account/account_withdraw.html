@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>提现</title>
+
+		<meta name="author" content="devloper@jieshunpay.com">
+
+		<!-- 为移动设备添加 viewport -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<!-- 关闭电话号码识别： -->
+		<meta content="telephone=no" name="format-detection">
+		<!-- 邮箱识别： -->
+		<meta content="email=no" name="format-detection">
+		<link rel="stylesheet" href="../../css_output/base/base.css" />
+		<link rel="stylesheet" href="../../css_output/vendors/mui.picker.css" />
+		<link rel="stylesheet" href="../../css_output/page/account_withdraw.css" inline/>
+	</head>
+
+	<body>
+		<header class="mui-navbar-inner mui-bar mui-bar-nav header">
+			<a class="back mui-icon mui-icon-back mui-action-back"></a>
+			<p class="mui-title">提现</p>
+		</header>
+		<div class="mui-content">
+
+			<section class="top-cell">
+				提现银行卡
+			</section>
+
+			<section class="card-cell" id="cardCell">
+				<span class="card-icon">
+					<img src="" />
+					</span>
+				<div class="card-info">
+					<p class="name" id="bindCard">添加银行卡</p>
+				</div>
+				<span class="cell-right icon-right mui-ellipsis">&nbsp;</span>
+			</section>
+
+			<section class="table-cell">
+				<span class="cell-left">可提额度(元)：</span>
+				<span class="cell-right mui-ellipsis" id="balance">0.00</span>
+			</section>
+
+			<section class="table-cell">
+				<span class="cell-left">提现金额：</span>
+				<div class="mui-input-row cell-right">
+					<input type="number" class="mui-input-clear" placeholder="请输入提现金额" id="moneyInput">
+				</div>
+			</section>
+
+			<section>
+				<div class="btn disabled" id="confirmBtn">
+					提现
+				</div>
+			</section>
+
+			<p class="tips">
+				温馨提示：<br/> 1.最小提现金额为XXXX元
+				<br/> 2.每天首笔提现免手续费哦
+				<br/>3.提现无上限限制（充值未投资的金额，每日最多提现10000元 ）
+				<br/> 4.提现到账T+1工作日完成（遇周末和法定节假日顺延）
+				<br/>
+			</p>
+		</div>
+
+		<!--MUI-->
+		<script src="../../js/vendors/mui.3.2.0.js"></script>
+		<script src="../../js/vendors/mui.actionsheet.popover.js"></script>
+		<script src="../../js/vendors/mui.picker.js"></script>
+		<!-- 自定义js -->
+		<script src="../../js/common.js"></script>
+		<script type="text/javascript" src="../../js/account_withdraw.js"></script>
+	</body>
+
+</html>

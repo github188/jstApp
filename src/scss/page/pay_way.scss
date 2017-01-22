@@ -1,0 +1,184 @@
+@import '../base/param';
+@import "../layout/header";
+@import "../sprite/sprite";
+@import "../layout/page_view";
+@import "../components/confirm";
+%borderBottom {
+    border-bottom: 1px solid $borderColor;
+}
+
+.mui-page,
+.mui-page-content,
+.mui-pages,
+.mui-view,
+.mui-views {
+    background: $colorfff;
+}
+
+//mui重写
+.mui-input-group .mui-input-row:after {
+    height: 0;
+}
+
+//入口：：支付方式
+//商品名称、金额
+.top-cell {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: $length130;
+    background: $mainColor;
+    color: $colorfff;
+    .t-c-product {
+        width: 50%;
+        text-align: center;
+        font-size: $fontSize12;
+    }
+    .t-c-money {
+        font-size: $fontSize30;
+        padding-top: $length10;
+    }
+}
+
+.tip {
+    font-size: $fontSize12;
+    color: $tipColor878787;
+    padding: 0 $length16;
+    line-height: $length40;
+    background: $tipBgColorf4f4f4;
+}
+
+.table-cell-view {
+    background: $colorfff;
+    padding: 0 $length16;
+    .cell-item {
+        display: flex;
+        align-items: center;
+        height: $length50;
+        border-bottom: 1px solid $borderColor;
+        .cell-img {
+            width: $length32;
+            height: $length32;
+            margin-right: $length8;
+        }
+        .cell-left {
+            flex: 1;
+            font-size: $fontSize14;
+        }
+        .cell-right {
+            flex: 1;
+            font-size: $fontSize14;
+        }
+        .text-right {
+            text-align: right;
+            color: $color666;
+        }
+    }
+    .cell-item.icon-right .text-right {
+        margin-right: $iconRightWidth;
+    }
+}
+
+//确认
+.btn-cell {
+    margin: $length50 auto;
+    width: 90%;
+    .btn {
+        background-color: $mainColor;
+        color: $colorfff;
+        line-height: $length40;
+        text-align: center;
+        border-radius: $length20;
+        font-size: $fontSize16;
+    }
+    .btn.disabled {
+        opacity: 0.5;
+    }
+}
+//付款中
+.wait-iconbox {
+    width: 15.625%;
+    overflow: hidden;
+    margin: auto;
+    padding-top: $length110;
+    img {
+        width: 100%;
+        height: auto;
+        display: inline-block;
+    }
+}
+.wait-info {
+    width: 100%;
+    overflow: hidden;
+    font-size: $fontSize14;
+    padding-top: $length20;
+    text-align: center;
+}
+//支付结果
+.pay-result {
+    width: 100%;
+    overflow: hidden;
+    .pay-hidden{
+        display: none;
+    }
+    .pay-success {
+        width: 100%;
+        overflow: hidden;
+        .pay-s-icon {
+            width: 15.625%;
+            overflow: hidden;
+            margin: auto;
+            padding-top: $length110;
+            img {
+                width: 100%;
+                height: auto;
+                display: inline-block;
+            }
+        }
+        .pay-s-info {
+            width: 100%;
+            overflow: hidden;
+            font-size: $fontSize14;
+            padding-top: $length20;
+            text-align: center;
+        }
+    }
+    .pay-fail {
+        width: 100%;
+        overflow: hidden;
+        .pay-f-icon {
+            width: 15.625%;
+            overflow: hidden;
+            margin: auto;
+            padding-top: $length50;
+            img {
+                width: 100%;
+                height: auto;
+                display: inline-block;
+            }
+        }
+        .pay-f-info {
+            width: 100%;
+            overflow: hidden;
+            line-height: $length20;
+            font-size: $fontSize14;
+            padding-top: $length55;
+            color: $color666;
+            text-align: center;
+        }
+        .pay-f-btn {
+            width: 87.5%;
+            height: $length42;
+            line-height: $length42;
+            margin: auto;
+            margin-top: $length140;
+            background: $mainColor;
+            border-radius: $length20;
+            color: $colorfff;
+            text-align: center;
+            font-size: $fontSize16;
+        }
+    }
+
+}

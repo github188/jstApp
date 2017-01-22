@@ -1,0 +1,155 @@
+@charset "utf-8";
+@import "../base/base";
+@import '../base/param';
+@import "../layout/header";
+@import "../layout/input";
+@import "../components/confirm";
+* {
+    font-family: "Microsoft YaHei", "Helvetica Neue", "Helvetica", "sans-serif", "arial", "宋体";
+    color: $color333;
+    padding: 0;
+}
+html,
+body {
+    height: 100%;
+}
+.ds-none {
+    display: none!important;
+}
+.mui-content {
+    padding: 0;
+    background: $colorfff;
+    height: 100%;
+}
+.mui-popup-button {
+    color: $jstMainColor;
+}
+.mui-popup-button.mui-popup-button-bold {
+    color: $jstMainColor;
+}
+/*头部信息*/
+.ban-cell {
+    width: 100%;
+    height: 2*$length50 + $length20 +$length44;
+    background-image: url("../../img/bg/card01.png");
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    position: relative;
+    .card-title {
+        color: $colorfff;
+        font-size: $fontSize11;
+        position: absolute;
+        top: $length60 + $length5;
+        left: $length30;
+    }
+    .card-num {
+        color: $colorfff;
+        font-size: $fontSize17;
+        position: absolute;
+        top: $length60 + $length35;
+        left: $length30;
+    }
+}
+/*卡号、密码输入*/
+.input-cell {
+    padding: 0 $length15;
+    margin-top: $length15;
+    .class-cell {
+        border-bottom: 1px solid $jstBorderColor;
+        padding: $length10 0;
+        .input-tips {
+            float: left;
+            width: 20%;
+            border-right: 1px solid $jstBorderColor;
+            line-height: $length25;
+            font-size: $fontSize14;
+        }
+        .fill-cell {
+            float: right;
+            width: 78%;
+            input {
+                border: 0;
+                margin: 0;
+                padding: 0;
+                height: auto;
+                outline: none;
+                line-height: $length25;
+                font-size: $fontSize14;
+                padding-left: $length5;
+            }
+            .err-tips {
+                color: $jstMainColor;
+                padding-left: $length5;
+                font-size: $fontSize12;
+                margin-top: $length5;
+            }
+        }
+    }
+}
+/**密码提示**/
+.tips-cell {
+    text-align: right;
+    margin-top: $length25;
+    padding: 0 $length15;
+    .pwd-tips {
+        i {
+            display: inline-block;
+            width: $length15;
+            height: $length15;
+            background-image: url("../../img/icon/jg.png");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 100% 100%;
+            vertical-align: middle;
+        }
+        span {
+            display: inline-block;
+            color: $jstMainColor;
+            font-size: $fontSize12;
+            vertical-align: middle;
+        }
+    }
+}
+/*确定按钮*/
+.btn-cell {
+    margin-top: 3*$length50;
+    .btn {
+        width: 7*$length40;
+        text-align: center;
+        margin: 0 auto;
+        border: 1px solid $jstBorderColor;
+        border-radius: $length20;
+        height: $length40;
+        font-size: $fontSize16;
+        line-height: $length40;
+    }
+    .btnOn {
+        border: 1px solid $jstMainColor;
+        color: $jstMainColor;
+    }
+}
+/*忘记密码提示*/
+.forget-cell {
+    display: none; //  .forget-tips{
+    //      span{
+    //          color:$jstMainColor;
+    //      }
+    //  }
+    //  .forget-img{
+    //      width:4*$length60 + $length10;
+    //      height:4*$length40;
+    //      background-image:url(../../img/bg/jstcard.png);
+    //      background-repeat:no-repeat;
+    //      background-position:center;
+    //      background-size:100% 100%;
+    //      margin:0 auto;
+    //  }
+}
+.forget-img {
+    img {
+        max-width: 100%;
+    }
+}
+.mui-popup-text{text-align: left}
+

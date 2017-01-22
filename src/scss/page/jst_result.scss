@@ -1,0 +1,91 @@
+@import '../base/param';
+@import "../layout/header";
+@import "../components/confirm";
+/*mui样式重写*/
+.mui-content {
+    padding-top: $length44;
+}
+.mui-popup-button {
+    color: $jstMainColor !important;
+}
+/*页面样式*/
+.none {
+    display: none !important;
+}
+.martop-10 {
+    margin-top: $length10;
+}
+.martop-18 {
+    margin-top: $length18;
+}
+.padtop-50{
+    padding-top: $length50;
+}
+.result-box {
+    width: 100%;
+    max-width: $maxwidth;
+    margin: auto;
+    overflow: hidden;
+    .result-img {
+        width: 25%;
+        overflow: hidden;
+        margin: auto;
+        padding-top: $length70;
+    }
+    .result-img img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+    .result-ti {
+        height: $length18;
+        line-height: $length18;
+        font-size: $length18;
+        text-align: center;
+        color: $color333;
+        margin-top: $length15;
+    }
+    .result-tips {
+        height: $length12;
+        line-height: $length12;
+        font-size: $length12;
+        text-align: center;
+        color: $color333;
+    }
+    .result-bottom {
+        margin-top: $length140;
+    }
+    .result-guide {
+        height: $length11;
+        line-height: $length11;
+        font-size: $length11;
+        text-align: center;
+        color: $tipColor878787;
+        margin-top: $length15;
+    }
+    .result-btn {
+        width: 87%;
+        display: block;
+        margin: auto;
+        height: $length40;
+        line-height: $length40;
+        font-size: $length16;
+        border: 1px solid $jstMainColor;
+        text-align: center;
+        border-radius: $length25;
+    }
+    .result-next {
+        margin-top: $length12;
+        color: #fff;
+        background: $jstMainColor;
+    }
+    .result-over {
+        margin-top: $length10;
+        color: $jstMainColor;
+    }
+    .click-orange:active {
+        background: $jstMainColor;
+        color: $colorfff;
+        border: 1px solid $jstMainColor;
+    }
+}

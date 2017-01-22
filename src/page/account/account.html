@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>账户主页</title>
+
+		<meta name="author" content="devloper@jieshunpay.com">
+
+		<!-- 为移动设备添加 viewport -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<!-- 关闭电话号码识别： -->
+		<meta content="telephone=no" name="format-detection">
+		<!-- 邮箱识别： -->
+		<meta content="email=no" name="format-detection">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../../css_output/base/base.css" />
+		<link rel="stylesheet" href="../../css_output/page/account.css" inline/>
+	</head>
+
+	<body>
+
+		<div class="mui-content">
+			<!--内容区 开始-->
+
+			<section class="balance-cell">
+
+				<p class="balance-text">账户余额</p>
+
+				<p class="balance" id="balance">0.00</p>
+
+				<p class="balance-recharge unlogin" id="recharge">充值</p>
+
+				<i class="set page-href" data-href="/page/account/set.html"></i>
+			</section>
+			<section class="balance-border"></section>
+
+			<ul class="table-cell-view">
+				<li class="cell-item">
+					<img class="cell-img" src="../../img/icon/icon_account_mobile.png" />
+					<div class="cell-info mui-ellipsis">
+						<span class="cell-name">手机账号</span>
+						<span class="cell-value unlogin" id="mobile">暂无数据</span>
+					</div>
+				</li>
+
+				<li class="cell-item icon-right page-href" data-href="/page/account/account_mycard.html">
+					<img class="cell-img" src="../../img/icon/icon_bank_card_list.png" />
+					<div class="cell-info mui-ellipsis unlogin">我的银行卡
+					</div>
+				</li>
+
+				<li class="cell-item icon-right page-href" data-href="/page/jst/jst_mycard.html">
+					<img class="cell-img" src="../../img/icon/icon_jst_logo.png" />
+					<div class="cell-info mui-ellipsis unlogin">捷顺通卡
+					</div>
+				</li>
+
+			</ul>
+
+			<section class="table-cell" id="withdraw" style="display: none;">
+				<span class="cell-left">提现</span>
+				<span class="cell-right icon-right mui-ellipsis">&nbsp;</span>
+			</section>
+
+			<section class="btn-cell unlogin">
+				<div class="btn" id="loginBtn">登录</div>
+			</section>
+			<!--内容区 结束-->
+
+		</div>
+		<!--MUI-->
+		<script src="../../js/vendors/mui.3.2.0.js"></script>
+		<!-- 自定义js -->
+		<script src="../../js/common.js"></script>
+		<script type="text/javascript" src="../../js/account.js"></script>
+
+	</body>
+
+</html>

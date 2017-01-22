@@ -1,0 +1,32 @@
+
+@import '../base/param';
+@import "../layout/header";
+
+.agree-box {
+    width: 100%;
+    overflow: hidden;
+    .agree-text {
+        width: 90%;
+        margin: auto;
+        overflow: hidden;
+        text-align: justify;
+        .agree-ti{
+            text-align: center;
+            font-size: $fontSize14;
+            color: $mainColor;
+            margin-top: $length20;
+        }
+        p {
+            font-size: $fontSize12;
+            color: $color666;
+            line-height: $length20;
+            text-indent: 2em;
+            .agree-point {
+                color: $color333;
+                font-weight: bold;
+                //text-decoration: underline;
+                }
+        }
+
+    }
+}
